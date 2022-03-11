@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1.React中的keys作用？ | coderqmj的博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/avatar.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.64f7ac41.css" as="style"><link rel="preload" href="/assets/js/app.922e2828.js" as="script"><link rel="preload" href="/assets/js/2.d7ac843b.js" as="script"><link rel="preload" href="/assets/js/90.f3adce23.js" as="script"><link rel="prefetch" href="/assets/js/10.7b3d9b0c.js"><link rel="prefetch" href="/assets/js/100.486e622c.js"><link rel="prefetch" href="/assets/js/101.d6e1dc74.js"><link rel="prefetch" href="/assets/js/102.7dd0bb36.js"><link rel="prefetch" href="/assets/js/103.c70d0e4e.js"><link rel="prefetch" href="/assets/js/104.6cea9b68.js"><link rel="prefetch" href="/assets/js/105.88d5190c.js"><link rel="prefetch" href="/assets/js/106.0873e8a7.js"><link rel="prefetch" href="/assets/js/107.aca94093.js"><link rel="prefetch" href="/assets/js/108.bca217a4.js"><link rel="prefetch" href="/assets/js/109.5f4a8562.js"><link rel="prefetch" href="/assets/js/11.3db82a7b.js"><link rel="prefetch" href="/assets/js/110.4f43d13c.js"><link rel="prefetch" href="/assets/js/111.12faead2.js"><link rel="prefetch" href="/assets/js/112.6a100fc4.js"><link rel="prefetch" href="/assets/js/113.b635ecb3.js"><link rel="prefetch" href="/assets/js/114.2fc49843.js"><link rel="prefetch" href="/assets/js/115.9bbd97fe.js"><link rel="prefetch" href="/assets/js/116.0111b15f.js"><link rel="prefetch" href="/assets/js/117.2a08ade6.js"><link rel="prefetch" href="/assets/js/118.d5f21bef.js"><link rel="prefetch" href="/assets/js/119.a4028cab.js"><link rel="prefetch" href="/assets/js/12.0d96d9ee.js"><link rel="prefetch" href="/assets/js/120.24ca1007.js"><link rel="prefetch" href="/assets/js/121.cd8ad292.js"><link rel="prefetch" href="/assets/js/122.9e44a8bf.js"><link rel="prefetch" href="/assets/js/123.75a2e13c.js"><link rel="prefetch" href="/assets/js/124.fba7ba6c.js"><link rel="prefetch" href="/assets/js/125.751f3e3f.js"><link rel="prefetch" href="/assets/js/126.6546e225.js"><link rel="prefetch" href="/assets/js/127.e6ffe9f0.js"><link rel="prefetch" href="/assets/js/128.5ba61cba.js"><link rel="prefetch" href="/assets/js/129.5cf13129.js"><link rel="prefetch" href="/assets/js/13.f663b287.js"><link rel="prefetch" href="/assets/js/130.8cf31a88.js"><link rel="prefetch" href="/assets/js/131.a8879ecb.js"><link rel="prefetch" href="/assets/js/132.309606b3.js"><link rel="prefetch" href="/assets/js/133.4ca29821.js"><link rel="prefetch" href="/assets/js/134.5952e738.js"><link rel="prefetch" href="/assets/js/14.f62f380d.js"><link rel="prefetch" href="/assets/js/15.d8470657.js"><link rel="prefetch" href="/assets/js/16.642b34d5.js"><link rel="prefetch" href="/assets/js/17.449c4fca.js"><link rel="prefetch" href="/assets/js/18.979e104a.js"><link rel="prefetch" href="/assets/js/19.58c49ce8.js"><link rel="prefetch" href="/assets/js/20.26fae8f2.js"><link rel="prefetch" href="/assets/js/21.39a99ff9.js"><link rel="prefetch" href="/assets/js/22.f59b98cf.js"><link rel="prefetch" href="/assets/js/23.a92e121d.js"><link rel="prefetch" href="/assets/js/24.6b0ab34d.js"><link rel="prefetch" href="/assets/js/25.59b56b46.js"><link rel="prefetch" href="/assets/js/26.0aa4999f.js"><link rel="prefetch" href="/assets/js/27.e99a8129.js"><link rel="prefetch" href="/assets/js/28.c7dd852e.js"><link rel="prefetch" href="/assets/js/29.999d3392.js"><link rel="prefetch" href="/assets/js/3.1f6a410f.js"><link rel="prefetch" href="/assets/js/30.2efdf158.js"><link rel="prefetch" href="/assets/js/31.82f0b64f.js"><link rel="prefetch" href="/assets/js/32.68df0343.js"><link rel="prefetch" href="/assets/js/33.3a7ea0a7.js"><link rel="prefetch" href="/assets/js/34.687b3b61.js"><link rel="prefetch" href="/assets/js/35.39c120eb.js"><link rel="prefetch" href="/assets/js/36.4449a7d9.js"><link rel="prefetch" href="/assets/js/37.9532964a.js"><link rel="prefetch" href="/assets/js/38.144e8bb9.js"><link rel="prefetch" href="/assets/js/39.2abf6f30.js"><link rel="prefetch" href="/assets/js/4.bdb68f26.js"><link rel="prefetch" href="/assets/js/40.7fac4b90.js"><link rel="prefetch" href="/assets/js/41.9011a251.js"><link rel="prefetch" href="/assets/js/42.8e84c1e4.js"><link rel="prefetch" href="/assets/js/43.419e4228.js"><link rel="prefetch" href="/assets/js/44.79192e61.js"><link rel="prefetch" href="/assets/js/45.4e83ef2a.js"><link rel="prefetch" href="/assets/js/46.536b615b.js"><link rel="prefetch" href="/assets/js/47.81416819.js"><link rel="prefetch" href="/assets/js/48.f1a49526.js"><link rel="prefetch" href="/assets/js/49.901c2a97.js"><link rel="prefetch" href="/assets/js/5.610e1eb4.js"><link rel="prefetch" href="/assets/js/50.148207f2.js"><link rel="prefetch" href="/assets/js/51.317f41c5.js"><link rel="prefetch" href="/assets/js/52.a6cfe0c4.js"><link rel="prefetch" href="/assets/js/53.31c15faa.js"><link rel="prefetch" href="/assets/js/54.86e49cfb.js"><link rel="prefetch" href="/assets/js/55.7e2c8fc0.js"><link rel="prefetch" href="/assets/js/56.699dc67d.js"><link rel="prefetch" href="/assets/js/57.33564c0f.js"><link rel="prefetch" href="/assets/js/58.87b42eb5.js"><link rel="prefetch" href="/assets/js/59.507ceb32.js"><link rel="prefetch" href="/assets/js/6.ec9aaafc.js"><link rel="prefetch" href="/assets/js/60.5a66cc53.js"><link rel="prefetch" href="/assets/js/61.92b1805f.js"><link rel="prefetch" href="/assets/js/62.caf5e68e.js"><link rel="prefetch" href="/assets/js/63.7817522c.js"><link rel="prefetch" href="/assets/js/64.e857c815.js"><link rel="prefetch" href="/assets/js/65.54c955d6.js"><link rel="prefetch" href="/assets/js/66.4dbd3059.js"><link rel="prefetch" href="/assets/js/67.9b678f79.js"><link rel="prefetch" href="/assets/js/68.081769bd.js"><link rel="prefetch" href="/assets/js/69.68a243e0.js"><link rel="prefetch" href="/assets/js/7.7d5d2905.js"><link rel="prefetch" href="/assets/js/70.3cf2db12.js"><link rel="prefetch" href="/assets/js/71.ae28c841.js"><link rel="prefetch" href="/assets/js/72.91f99661.js"><link rel="prefetch" href="/assets/js/73.31290ec1.js"><link rel="prefetch" href="/assets/js/74.3b64e893.js"><link rel="prefetch" href="/assets/js/75.816b9303.js"><link rel="prefetch" href="/assets/js/76.decf1ed4.js"><link rel="prefetch" href="/assets/js/77.d27ebbbb.js"><link rel="prefetch" href="/assets/js/78.2222d4be.js"><link rel="prefetch" href="/assets/js/79.256139d8.js"><link rel="prefetch" href="/assets/js/8.42123a36.js"><link rel="prefetch" href="/assets/js/80.16680d3c.js"><link rel="prefetch" href="/assets/js/81.2f786598.js"><link rel="prefetch" href="/assets/js/82.911631e1.js"><link rel="prefetch" href="/assets/js/83.4cb96d07.js"><link rel="prefetch" href="/assets/js/84.06e4f668.js"><link rel="prefetch" href="/assets/js/85.e77e6e1e.js"><link rel="prefetch" href="/assets/js/86.d2ef0414.js"><link rel="prefetch" href="/assets/js/87.bf848bae.js"><link rel="prefetch" href="/assets/js/88.a52426df.js"><link rel="prefetch" href="/assets/js/89.b57aa852.js"><link rel="prefetch" href="/assets/js/9.b646ca99.js"><link rel="prefetch" href="/assets/js/91.aef49fa5.js"><link rel="prefetch" href="/assets/js/92.b5faa774.js"><link rel="prefetch" href="/assets/js/93.1106a757.js"><link rel="prefetch" href="/assets/js/94.8e0db68a.js"><link rel="prefetch" href="/assets/js/95.18fe0149.js"><link rel="prefetch" href="/assets/js/96.9256b873.js"><link rel="prefetch" href="/assets/js/97.94de60a0.js"><link rel="prefetch" href="/assets/js/98.f196f022.js"><link rel="prefetch" href="/assets/js/99.00436cae.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.64f7ac41.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/avatar.png" alt="coderqmj的博客" class="logo"> <span class="site-name can-hide">coderqmj的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  文章
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  琐碎
+</a></li></ul></div></div><div class="nav-item"><a href="https://leetcode-cn.com/u/2vgrNDufDX/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/coderqmj" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  文章
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  琐碎
+</a></li></ul></div></div><div class="nav-item"><a href="https://leetcode-cn.com/u/2vgrNDufDX/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/coderqmj" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>计算机网络</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/ComputerNet/HTTP.html" class="sidebar-link">1.HTTP相关</a></li><li><a href="/pages/ComputerNet/七层模型.html" class="sidebar-link">2.七/四/五层模型</a></li><li><a href="/pages/ComputerNet/浏览器缓存.html" class="sidebar-link">浏览器缓存</a></li><li><a href="/pages/ComputerNet/HTTPS.html" class="sidebar-link">HTTPS</a></li><li><a href="/pages/ComputerNet/浏览器安全.html" class="sidebar-link">浏览器安全</a></li><li><a href="/pages/ComputerNet/浏览器性能优化.html" class="sidebar-link">浏览器性能优化</a></li><li><a href="/pages/ComputerNet/HTTP历史.html" class="sidebar-link">HTTP历史</a></li><li><a href="/pages/ComputerNet/HTTP请求流程.html" class="sidebar-link">HTTP请求流程</a></li><li><a href="/pages/ComputerNet/JavaScript如何影响DOM树构建.html" class="sidebar-link">JavaScript如何影响DOM树构建</a></li><li><a href="/pages/ComputerNet/CSS如何影响首次白屏.html" class="sidebar-link">CSS如何影响首次白屏</a></li><li><a href="/pages/ComputerNet/分层合成：为什么CSS比JS高效.html" class="sidebar-link">分层合成：为什么CSS比JS高效</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>NODE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>构建工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构与算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>GIT教程</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>TypeScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>正则表达式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>项目</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>三方库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>实习遇到的问题及成长</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>腾讯工作的思考与总结</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>琐碎</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="_1-react中的keys作用"><a href="#_1-react中的keys作用" class="header-anchor">#</a> 1.React中的keys作用？</h3> <div class="language- extra-class"><pre class="language-text"><code>作用：Keys是React中用于追踪列表中元素的增、删、改时的辅助标识
+
+具体：
+	key是列表子元素的唯一标识符，新的组件可能对这个列表进行了
+	增加，删除，重新排列子元素的操作，有了key的话，新旧组件对比
+	到相同的key，就可以避免节点不必要的删除与创建操作，时节点的
+	复用性提高，达到了提高性能的目的
+	
+	key 相同，但属性不同，只会更新属性；
+	key不同，则会销毁组件，重新创建新组件
+</code></pre></div><h3 id="_2-refs的作用"><a href="#_2-refs的作用" class="header-anchor">#</a> 2.refs的作用</h3> <div class="language- extra-class"><pre class="language-text"><code>作用：安全访问某个元素或者某个组件实例的句柄。
+使用场景：媒体播放，文本选择，触发强制动画
+</code></pre></div><h3 id="_3-修改了state进行相关的操作"><a href="#_3-修改了state进行相关的操作" class="header-anchor">#</a> 3.修改了state进行相关的操作</h3> <div class="language- extra-class"><pre class="language-text"><code>1.通过setState的第二个回调函数
+2.通过生命周期函数
+</code></pre></div><h3 id="_4-diff算法说一下"><a href="#_4-diff算法说一下" class="header-anchor">#</a> 4.diff算法说一下</h3> <h3 id="_5-setstate什么时候是同步的-什么时候是异步的"><a href="#_5-setstate什么时候是同步的-什么时候是异步的" class="header-anchor">#</a> 5.setState什么时候是同步的，什么时候是异步的？</h3> <div class="language- extra-class"><pre class="language-text"><code>一.同步情况
+	1.setTimeout里面是同步的
+	2.原生DOM事件(addEventListener)是同步的
+
+二、异步
+	1.合成事件
+	2.生命周期
+</code></pre></div><h3 id="_6-哪里可以拿到最近的state值"><a href="#_6-哪里可以拿到最近的state值" class="header-anchor">#</a> 6.哪里可以拿到最近的state值</h3> <div class="language- extra-class"><pre class="language-text"><code>1.生命周期函数componentDidUpdate
+
+2.setState里面的第二个回调参数可以拿到最近的值
+</code></pre></div><h3 id="_7-多个setstate的合并"><a href="#_7-多个setstate的合并" class="header-anchor">#</a> 7.多个setState的合并</h3> <ul><li>还是1</li> <li>源码内部用了do while循环</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      counter<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>counter <span class="token operator">+</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      counter<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>counter <span class="token operator">+</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      counter<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>counter <span class="token operator">+</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><ul><li>如果想要它累加呢？</li> <li>将第一个参数设置为函数(prevState, props),拿到先前的state</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">prevState<span class="token punctuation">,</span> props</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      counter<span class="token operator">:</span> prevState<span class="token punctuation">.</span>counter <span class="token operator">+</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">prevState<span class="token punctuation">,</span> props</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      counter<span class="token operator">:</span> prevState<span class="token punctuation">.</span>counter <span class="token operator">+</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">prevState<span class="token punctuation">,</span> props</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      counter<span class="token operator">:</span> prevState<span class="token punctuation">.</span>counter <span class="token operator">+</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><h3 id="_8-父子组件通信-兄弟组件通信"><a href="#_8-父子组件通信-兄弟组件通信" class="header-anchor">#</a> 8.父子组件通信/兄弟组件通信</h3> <div class="language- extra-class"><pre class="language-text"><code>Context/eventBus
+父传子：props
+子传父：props，在父组件创建好函数，传入props中，在子组件里取出来，从而达到使用父组件的state。
+兄弟：event bus安装第三方、context Provider提供数据，Consumer里面使用数据
+redux
+</code></pre></div><h3 id="_9-react渲染dom的原理"><a href="#_9-react渲染dom的原理" class="header-anchor">#</a> 9.react渲染DOM的原理</h3> <div class="language- extra-class"><pre class="language-text"><code>JSX -&gt; 虚拟DOM -&gt; 真实DOM
+1.首先我们一般都使用JSX去写一些DOM，但本质上这是一种语法糖，内部会帮我们做一个转换，将JSX语法转换成
+React.createElement(标签，属性，子组件)这个函数。
+2.React.createElement：
+	这个函数主要做三样事情：
+		1.取出config属性
+			1.key，ref，source等等
+			2.创建一个属性的对象，将每个属性通过for in循环config进行存储至props中
+		2.处理children
+			1.判断孩子长度是否&gt;1，1的话props.children=children;
+			2.&gt;1的话，创建一个数组childrenArray，通过遍历children，将数组赋值，最后props.children=childrenArray
+		3.返回ReactElement（虚拟DOM）
+</code></pre></div><h3 id="_10-react更新流程"><a href="#_10-react更新流程" class="header-anchor">#</a> 10.React更新流程</h3> <div class="language- extra-class"><pre class="language-text"><code>props/state改变 -&gt; render函数重新执行 -&gt; 产生新的DOM树
+-&gt; 新旧DOM树进行diff -&gt; 计算差异进行更新 -&gt; 更新到真实的DOM
+</code></pre></div><h3 id="_11-react和vue的差异"><a href="#_11-react和vue的差异" class="header-anchor">#</a> 11.React和Vue的差异</h3> <div class="language- extra-class"><pre class="language-text"><code>1.创建组件的方式
+	vue通过.vue文件就可以创建一个组件
+	react通过js创建类组件(继承Component)和函数组件
+
+2.更新状态不一样
+	vue拿到data可以直接进行修改
+	react通过setState修改，用新的state替换旧state
+
+3.生命周期
+	vue里面有beforeCreate，created ，react没有
+	vue没有手动判断组件是否需要更新，react有shouldComponentUpdate
+
+4.组件通信
+	vue父传子props，子传父通过emit。react的props则是两者都可以
+	跨组件vue用事件总线，react用context
+	
+5.书写方式
+	vue封装了很多指令：v-bind，v-for；react更多的是用原生js，更加纯粹
+</code></pre></div><h3 id="_12-jsx的本质-虚拟dom的创建过程"><a href="#_12-jsx的本质-虚拟dom的创建过程" class="header-anchor">#</a> 12.jsx的本质/虚拟DOM的创建过程</h3> <div class="language- extra-class"><pre class="language-text"><code>jsx 仅仅只是 React.createElement(component, props, ...children) 函数的语法糖。
+所有的jsx最终都会被转换成React.createElement的函数调用
+</code></pre></div><h3 id="_13-useselector缺点-怎么解决"><a href="#_13-useselector缺点-怎么解决" class="header-anchor">#</a> 13.useSelector缺点？怎么解决</h3> <div class="language- extra-class"><pre class="language-text"><code>他会使本不该重新渲染的页面发生重新渲染，
+第二个参数用shallowEqual，进行浅层比较
+</code></pre></div><h3 id="_14-为什么使用redux-redux更新数据后为什么重新渲染"><a href="#_14-为什么使用redux-redux更新数据后为什么重新渲染" class="header-anchor">#</a> 14.为什么使用Redux? Redux更新数据后为什么重新渲染</h3> <div class="language- extra-class"><pre class="language-text"><code>1.redux完美解决了组件之间的通信问题，不然就要通过props传来传去，有redux，每个组件都可以从redux获取最新store数据，也可以修改store里面的数据。
+2.数据修改时可以被追踪
+
+重新渲染：
+	在componentDidMount订阅了store的变化，且在componentWillUnmount进行取消订阅。
+	用connect纯函数实现的
+</code></pre></div><h3 id="_14-纯函数connect"><a href="#_14-纯函数connect" class="header-anchor">#</a> 14.纯函数connect</h3> <div class="language- extra-class"><pre class="language-text"><code>
+</code></pre></div><h3 id="_15-请求数据存到redux过程"><a href="#_15-请求数据存到redux过程" class="header-anchor">#</a> 15.请求数据存到redux过程</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token number">1.</span>定义接口，定义常量
+<span class="token number">2.</span>在reducer里面定义数组用于存储
+<span class="token number">3.</span>在reducer里面<span class="token keyword">case</span>，并返回修改的数据
+<span class="token number">4.</span>在actionCreators里面定义getXXXAction
+<span class="token number">5.</span>在actionCreators里面定义changeXXXAction供getXXXAction使用
+    <span class="token keyword">const</span> <span class="token function-variable function">changeHotRecommendAction</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+      type<span class="token operator">:</span> actionTypes<span class="token punctuation">.</span><span class="token constant">CHANGE_HOT_RECOMMEND</span><span class="token punctuation">,</span>
+      hotRecommend<span class="token operator">:</span> res<span class="token punctuation">.</span>banners
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">getHotRecommendAction</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token parameter">dispatch</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">getHotRecommend</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+          <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">changeHotRecommendAction</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token number">6.</span>在相关页面使用useDispatch和useEffect请求
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> hotRecommend <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useSelector</span><span class="token punctuation">(</span><span class="token parameter">state</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    hotRecommend<span class="token operator">:</span> state<span class="token punctuation">.</span><span class="token function">getIn</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'recommend'</span><span class="token punctuation">,</span>hotRecommend<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>shallowEqual<span class="token punctuation">)</span>
+  
+  <span class="token keyword">const</span> dispatch <span class="token operator">=</span> <span class="token function">useDispatch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 其他hooks</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">getHotRecommendAction</span><span class="token punctuation">(</span>limit<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">[</span>dispatch<span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="_15-redux请求数据过程"><a href="#_15-redux请求数据过程" class="header-anchor">#</a> 15.redux请求数据过程</h3> <div class="language- extra-class"><pre class="language-text"><code>1.首先封装请求数据的函数，导出
+2.定义常量。
+4.在actionCreators定义action，action由type和payload对象组成。拿到请求结果，放入state里面
+3.在业务代码中dispatch(action)，他会自动调用reducer。
+3.在reducer里面进行switch case actionType，返回最新的state
+5.在组件里面进行useEffect请求。
+</code></pre></div><h3 id="_16-生命周期"><a href="#_16-生命周期" class="header-anchor">#</a> 16.生命周期</h3> <div class="language- extra-class"><pre class="language-text"><code>常用：
+1.Constructor：初始化内部state，绑定this
+2.componentDidMount: 组件挂载到DOM上就会回调
+	1.依赖DOM的操作
+	2.发送网络请求
+	3.添加订阅事件(在unmounted里面取消)
+3.componentDidUpdate
+	1.更新后立即调用
+	2.如果需要与新旧props进行对比可以在这里
+4.componentWillUnmount：组件即将被移除，回调
+	1.清理操作
+	2.订阅事件，timer，取消网络请求
+5.shouldComponentUpdate	
+	1.手动判断组件是否更新
+
+不推荐使用：
+	willMounted，willUpdate
+	
+官方文档：
+	官方文档分为常用生命周期和不常用生命周期
+		常用生命周期：
+			1.constructor
+			2.render
+			3.componentDidMount
+			4.componentDidUpdate
+			5.componentWillUnMount
+		不常用：
+			1.getDerivedStateFromProps：在调用render方法之前调用
+			2.getSnapshotBeforeUpdate：在最近一次渲染输出之前调用，是组件在发生更改前那个DOM获取信息，如滚动位置。这个生命周期任何返回值都会传给componentDidUpdate。
+			3.shouldComponentUpdate：手动判断组件是否需要更新。
+</code></pre></div><h3 id="_17-usememo和usecallback的区别"><a href="#_17-usememo和usecallback的区别" class="header-anchor">#</a> 17.useMemo和useCallback的区别</h3> <div class="language- extra-class"><pre class="language-text"><code>1.useMemo是让函数在依赖不改变的情况下，不对这个值进行重新运算	
+1.useCallback是对函数进行缓存，用于子组件引用父组件的函数，父组重新渲染，避免函数的引用发生改变
+
+2.useMemo优化的是函数进行运算的开销
+2.useCallback优化的组件重新渲染的开销
+</code></pre></div><h3 id="_18-immutablejs"><a href="#_18-immutablejs" class="header-anchor">#</a> 18. ImmutableJs</h3> <div class="language- extra-class"><pre class="language-text"><code>1.使用原因
+	reducer里面很多数据，每次修改数据时就要重新浅拷贝(因为react不支持直接修改state)，返回新对象，开销大，浪	 费性能。
+
+2.原理：修改了对象，就返回新的对象，但是旧的对象不发生改变；使用了持久化数据结构，他会尽可能利用之前的数据不会造成性能浪费，使得内存不会被浪费；是一个树结构；
+
+3.使用：
+	1.把对象变为Immutable对象，Map(对象),但是只会浅层，使用fromJS会深拷贝转换
+	2.设值：info.set(属性，'值')
+	3.取值：state.get('name') 或者 state.getIn('recommend','hotRecommend')
+</code></pre></div><h3 id="_19-react-hooks"><a href="#_19-react-hooks" class="header-anchor">#</a> 19.react-hooks</h3> <div class="language- extra-class"><pre class="language-text"><code>1.useState 定义数据
+2.useEffect 模拟生命周期函数
+	1.在里面做网络请求，订阅事件，取消订阅
+	2.第一个参数相当于mounted，return那个就是unmounted
+3.useContext
+	1.可以做一些数据的共享
+	2.使用createContext创建相应的context
+	3.用Provider作为数据的提供者，将想要被使用数据的组件包裹起来；
+	4.在使用数据的组件里面使用useContext，把创建的context传入，就可以拿到共享数据
+4.useReducer
+	1.不是reducer的替代，是useState的一中替代
+	2.state处理的逻辑比较复杂，可以通过useReducer进行拆分
+
+5.useCallback，对性能做优化
+	1.对函数进行了缓存，防止子组件做不必要的渲染
+	2.用在子组件使用了父组件的函数，如果父组件重新渲染，那么函数的引用就会变，造成子组件认为两次传进来的函数不		一样，从而进行渲染。
+	3.可以使用依赖判断其是否需要更新
+
+6.useMemo
+	1.对函数是否运行做一些优化
+	2.在开发中，组件经常用到一些需要经过计算的属性，但是有些时候这个属性没有发生变化的，但是还是会重新进行计算
+	3.需要一个记忆值，将它缓存下来，依赖不变的情况下就不用做不必要的计算
+</code></pre></div><h3 id="_20-redux-hooks"><a href="#_20-redux-hooks" class="header-anchor">#</a> 20.redux-hooks</h3> <div class="language- extra-class"><pre class="language-text"><code>1.useDispatch
+	1.一般都在useEffect里面
+	2.派发相应的action，做一些reducer数据的修改；
+2.useSelector
+	1.获取redux里面的数据
+	2.一般都会用一个浅层比较shallowEqual去
+</code></pre></div><h3 id="_21-setstate为什么异步"><a href="#_21-setstate为什么异步" class="header-anchor">#</a> 21.setState为什么异步?</h3> <div class="language- extra-class"><pre class="language-text"><code>1.一句话总结：显著提高性能。
+2.解释：
+	1.每调用一次setState就代表着render频繁调用，重新渲染页面。效率低。
+	2.异步的话可以获取到多个更新，然后批量处理。
+3.同步更新state，但是没有执行render那么state就不能和props保持同步；就会产生很多问题。
+</code></pre></div><h3 id="_22-为什么使用setstate-不直接修改this-state"><a href="#_22-为什么使用setstate-不直接修改this-state" class="header-anchor">#</a> 22.为什么使用setState？不直接修改this.state</h3> <div class="language- extra-class"><pre class="language-text"><code>1.直接修改this.state，React是不知道数据发生变化的。
+2.因为他没有像vue中做了数据数据监听。
+3.
+</code></pre></div><h3 id="_23-setstate怎么实现的"><a href="#_23-setstate怎么实现的" class="header-anchor">#</a> 23.setState怎么实现的？</h3> <div class="language- extra-class"><pre class="language-text"><code>1.setState有两个参数，第一个partialState，第二个callback
+2.首先判断partialState必须是function，object，null中的一个，否则报错
+3.执行的是this.updater.enqueueSetState(this, partialState, callback, 'setState');
+	每个类组件都有updater
+	enqueueSetState根据不同的上下文，生成一个currentTime，再用currentTime计算一个过期时间。
+	这个过期时间只有两个值，一个Sync，一个Batched，对应同步，异步（批量处理）
+</code></pre></div><h3 id="_24-setstate如何立即获取到更新后的值"><a href="#_24-setstate如何立即获取到更新后的值" class="header-anchor">#</a> 24.setState如何立即获取到更新后的值</h3> <div class="language- extra-class"><pre class="language-text"><code>1.setState里面有第二个参数，是一个回调函数，可以在里面获取到。
+2.在componentDidUpdate生命周期也可以获取到最新的值。
+</code></pre></div><h3 id="_25-setstate多次合并的问题"><a href="#_25-setstate多次合并的问题" class="header-anchor">#</a> 25.setState多次合并的问题</h3> <div class="language- extra-class"><pre class="language-text"><code>1.setState在传入对象时，多次累加就只会执行一次。
+2.想要多次累加的话，可以将setState的第一个参数换为函数。
+</code></pre></div><h3 id="_26-高阶组件hoc"><a href="#_26-高阶组件hoc" class="header-anchor">#</a> 26.高阶组件HOC</h3> <div class="language- extra-class"><pre class="language-text"><code>概念：
+	和高阶函数很像，把一个组件作为参数传入，经过处理，返回一个新的组件。我的理解就是在使用之前对组件做一个劫持，对它做很多的操作，再去使用。
+作用：
+	使代码更优雅，代码可以复用，很多组件需要使用到一些共同属性，一个一个写就很麻烦，直接一个withRouter即可
+应用：
+	1、增强props(withRouter)
+缺点：
+	1.有嵌套关系，结构不够美观，阅读性较差
+	2.出现了hooks解决了很多问题
+注意：高阶组件是一个函数，而不是一个组件
+
+</code></pre></div><h3 id="_27-react传参方式"><a href="#_27-react传参方式" class="header-anchor">#</a> 27.React传参方式</h3> <h3 id="_28-react每次setstate都会引起diff算法吗"><a href="#_28-react每次setstate都会引起diff算法吗" class="header-anchor">#</a> 28.React每次setState都会引起diff算法吗</h3> <div class="language- extra-class"><pre class="language-text"><code>不一定
+
+理由：
+	1.当进行了SCU优化时，setState之后又进行了浅层比较，有可能就是在浅层比较阶段没有深入对比下去，然后又是state里面对象没有拷贝，造成浅层比较判定值都一样。所以，setState之后，可能不会发起diff算法。
+</code></pre></div><h3 id="_29-rn和react的区别"><a href="#_29-rn和react的区别" class="header-anchor">#</a> 29.RN和React的区别</h3> <div class="language- extra-class"><pre class="language-text"><code>RN：用对应的是移动应用平台															React：渲染品台是浏览器HTML渲染
+RN：都是用JSX语法进行开发，都是利用虚拟DOM这个特性
+RN：自动匹配不同手机的大小
+RN：很多css3样式不能使用box-shadow
+</code></pre></div><h3 id="_30-redux原理"><a href="#_30-redux原理" class="header-anchor">#</a> 30.redux原理</h3> <h3 id="_31-redux-dispatch之后如何引发页面渲染的"><a href="#_31-redux-dispatch之后如何引发页面渲染的" class="header-anchor">#</a> 31.redux dispatch之后如何引发页面渲染的</h3> <h3 id="_32-为什么使用redux"><a href="#_32-为什么使用redux" class="header-anchor">#</a> 32.为什么使用Redux</h3> <h3 id="_33-hooks原理-如何自定义hooks"><a href="#_33-hooks原理-如何自定义hooks" class="header-anchor">#</a> 33.hooks原理？如何自定义hooks</h3> <h3 id="_34-父子组件的挂载-卸载顺序"><a href="#_34-父子组件的挂载-卸载顺序" class="header-anchor">#</a> 34.父子组件的挂载，卸载顺序</h3> <div class="language- extra-class"><pre class="language-text"><code>挂载：
+	1.父组件即将挂载
+	2.子组件即将挂载
+	3.子组件挂载完成
+	4.父组件挂载完成
+卸载：
+	
+</code></pre></div><h3 id="_35-react-hooks常见的坑-怎么解决"><a href="#_35-react-hooks常见的坑-怎么解决" class="header-anchor">#</a> 35.React Hooks常见的坑？怎么解决？</h3> <div class="language- extra-class"><pre class="language-text"><code>1.hook必须放在最上层，也就是返回的后面。
+2.对于有依赖，有缓存的请求hook，在进行修改数据之后，依赖项没有改变，导致不回去请求数据库中最新的数据。（第三方库的useQuery)
+3.优化一方面性能的同时也降低了另外一部分的性能，使用是有代价的，（对比前后Deps依赖，进行了shallowEqual，开销不一定谁大谁小）
+4.闭包引发的问题，会导致保存了旧值，使用const currentState = React.useRef(state)可以解决这个问题，拿到最新的值
+5.修改状态是异步的，不能够立马获取的最新的值（目的是提高性能，批量处理，而不是修改一次就重绘一次）
+</code></pre></div><h3 id="_36-类组件和函数组件的区别"><a href="#_36-类组件和函数组件的区别" class="header-anchor">#</a> 36.类组件和函数组件的区别</h3> <div class="language- extra-class"><pre class="language-text"><code>1.函数式在一定程度上降低了代码量，useeffect合并了componentDidMount、componentDidUpdate 和 componentWillUnmount。
+2.提供了很多好用的hook，包括了优化性能的hook
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新于:</span> <span class="time">2/9/2022, 6:39:38 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.922e2828.js" defer></script><script src="/assets/js/2.d7ac843b.js" defer></script><script src="/assets/js/90.f3adce23.js" defer></script>
+  </body>
+</html>

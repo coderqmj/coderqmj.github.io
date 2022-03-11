@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>前端模块化：CommonJS，AMD，CMD，ES6 | coderqmj的博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/avatar.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.64f7ac41.css" as="style"><link rel="preload" href="/assets/js/app.922e2828.js" as="script"><link rel="preload" href="/assets/js/2.d7ac843b.js" as="script"><link rel="preload" href="/assets/js/42.8e84c1e4.js" as="script"><link rel="prefetch" href="/assets/js/10.7b3d9b0c.js"><link rel="prefetch" href="/assets/js/100.486e622c.js"><link rel="prefetch" href="/assets/js/101.d6e1dc74.js"><link rel="prefetch" href="/assets/js/102.7dd0bb36.js"><link rel="prefetch" href="/assets/js/103.c70d0e4e.js"><link rel="prefetch" href="/assets/js/104.6cea9b68.js"><link rel="prefetch" href="/assets/js/105.88d5190c.js"><link rel="prefetch" href="/assets/js/106.0873e8a7.js"><link rel="prefetch" href="/assets/js/107.aca94093.js"><link rel="prefetch" href="/assets/js/108.bca217a4.js"><link rel="prefetch" href="/assets/js/109.5f4a8562.js"><link rel="prefetch" href="/assets/js/11.3db82a7b.js"><link rel="prefetch" href="/assets/js/110.4f43d13c.js"><link rel="prefetch" href="/assets/js/111.12faead2.js"><link rel="prefetch" href="/assets/js/112.6a100fc4.js"><link rel="prefetch" href="/assets/js/113.b635ecb3.js"><link rel="prefetch" href="/assets/js/114.2fc49843.js"><link rel="prefetch" href="/assets/js/115.9bbd97fe.js"><link rel="prefetch" href="/assets/js/116.0111b15f.js"><link rel="prefetch" href="/assets/js/117.2a08ade6.js"><link rel="prefetch" href="/assets/js/118.d5f21bef.js"><link rel="prefetch" href="/assets/js/119.a4028cab.js"><link rel="prefetch" href="/assets/js/12.0d96d9ee.js"><link rel="prefetch" href="/assets/js/120.24ca1007.js"><link rel="prefetch" href="/assets/js/121.cd8ad292.js"><link rel="prefetch" href="/assets/js/122.9e44a8bf.js"><link rel="prefetch" href="/assets/js/123.75a2e13c.js"><link rel="prefetch" href="/assets/js/124.fba7ba6c.js"><link rel="prefetch" href="/assets/js/125.751f3e3f.js"><link rel="prefetch" href="/assets/js/126.6546e225.js"><link rel="prefetch" href="/assets/js/127.e6ffe9f0.js"><link rel="prefetch" href="/assets/js/128.5ba61cba.js"><link rel="prefetch" href="/assets/js/129.5cf13129.js"><link rel="prefetch" href="/assets/js/13.f663b287.js"><link rel="prefetch" href="/assets/js/130.8cf31a88.js"><link rel="prefetch" href="/assets/js/131.a8879ecb.js"><link rel="prefetch" href="/assets/js/132.309606b3.js"><link rel="prefetch" href="/assets/js/133.4ca29821.js"><link rel="prefetch" href="/assets/js/134.5952e738.js"><link rel="prefetch" href="/assets/js/14.f62f380d.js"><link rel="prefetch" href="/assets/js/15.d8470657.js"><link rel="prefetch" href="/assets/js/16.642b34d5.js"><link rel="prefetch" href="/assets/js/17.449c4fca.js"><link rel="prefetch" href="/assets/js/18.979e104a.js"><link rel="prefetch" href="/assets/js/19.58c49ce8.js"><link rel="prefetch" href="/assets/js/20.26fae8f2.js"><link rel="prefetch" href="/assets/js/21.39a99ff9.js"><link rel="prefetch" href="/assets/js/22.f59b98cf.js"><link rel="prefetch" href="/assets/js/23.a92e121d.js"><link rel="prefetch" href="/assets/js/24.6b0ab34d.js"><link rel="prefetch" href="/assets/js/25.59b56b46.js"><link rel="prefetch" href="/assets/js/26.0aa4999f.js"><link rel="prefetch" href="/assets/js/27.e99a8129.js"><link rel="prefetch" href="/assets/js/28.c7dd852e.js"><link rel="prefetch" href="/assets/js/29.999d3392.js"><link rel="prefetch" href="/assets/js/3.1f6a410f.js"><link rel="prefetch" href="/assets/js/30.2efdf158.js"><link rel="prefetch" href="/assets/js/31.82f0b64f.js"><link rel="prefetch" href="/assets/js/32.68df0343.js"><link rel="prefetch" href="/assets/js/33.3a7ea0a7.js"><link rel="prefetch" href="/assets/js/34.687b3b61.js"><link rel="prefetch" href="/assets/js/35.39c120eb.js"><link rel="prefetch" href="/assets/js/36.4449a7d9.js"><link rel="prefetch" href="/assets/js/37.9532964a.js"><link rel="prefetch" href="/assets/js/38.144e8bb9.js"><link rel="prefetch" href="/assets/js/39.2abf6f30.js"><link rel="prefetch" href="/assets/js/4.bdb68f26.js"><link rel="prefetch" href="/assets/js/40.7fac4b90.js"><link rel="prefetch" href="/assets/js/41.9011a251.js"><link rel="prefetch" href="/assets/js/43.419e4228.js"><link rel="prefetch" href="/assets/js/44.79192e61.js"><link rel="prefetch" href="/assets/js/45.4e83ef2a.js"><link rel="prefetch" href="/assets/js/46.536b615b.js"><link rel="prefetch" href="/assets/js/47.81416819.js"><link rel="prefetch" href="/assets/js/48.f1a49526.js"><link rel="prefetch" href="/assets/js/49.901c2a97.js"><link rel="prefetch" href="/assets/js/5.610e1eb4.js"><link rel="prefetch" href="/assets/js/50.148207f2.js"><link rel="prefetch" href="/assets/js/51.317f41c5.js"><link rel="prefetch" href="/assets/js/52.a6cfe0c4.js"><link rel="prefetch" href="/assets/js/53.31c15faa.js"><link rel="prefetch" href="/assets/js/54.86e49cfb.js"><link rel="prefetch" href="/assets/js/55.7e2c8fc0.js"><link rel="prefetch" href="/assets/js/56.699dc67d.js"><link rel="prefetch" href="/assets/js/57.33564c0f.js"><link rel="prefetch" href="/assets/js/58.87b42eb5.js"><link rel="prefetch" href="/assets/js/59.507ceb32.js"><link rel="prefetch" href="/assets/js/6.ec9aaafc.js"><link rel="prefetch" href="/assets/js/60.5a66cc53.js"><link rel="prefetch" href="/assets/js/61.92b1805f.js"><link rel="prefetch" href="/assets/js/62.caf5e68e.js"><link rel="prefetch" href="/assets/js/63.7817522c.js"><link rel="prefetch" href="/assets/js/64.e857c815.js"><link rel="prefetch" href="/assets/js/65.54c955d6.js"><link rel="prefetch" href="/assets/js/66.4dbd3059.js"><link rel="prefetch" href="/assets/js/67.9b678f79.js"><link rel="prefetch" href="/assets/js/68.081769bd.js"><link rel="prefetch" href="/assets/js/69.68a243e0.js"><link rel="prefetch" href="/assets/js/7.7d5d2905.js"><link rel="prefetch" href="/assets/js/70.3cf2db12.js"><link rel="prefetch" href="/assets/js/71.ae28c841.js"><link rel="prefetch" href="/assets/js/72.91f99661.js"><link rel="prefetch" href="/assets/js/73.31290ec1.js"><link rel="prefetch" href="/assets/js/74.3b64e893.js"><link rel="prefetch" href="/assets/js/75.816b9303.js"><link rel="prefetch" href="/assets/js/76.decf1ed4.js"><link rel="prefetch" href="/assets/js/77.d27ebbbb.js"><link rel="prefetch" href="/assets/js/78.2222d4be.js"><link rel="prefetch" href="/assets/js/79.256139d8.js"><link rel="prefetch" href="/assets/js/8.42123a36.js"><link rel="prefetch" href="/assets/js/80.16680d3c.js"><link rel="prefetch" href="/assets/js/81.2f786598.js"><link rel="prefetch" href="/assets/js/82.911631e1.js"><link rel="prefetch" href="/assets/js/83.4cb96d07.js"><link rel="prefetch" href="/assets/js/84.06e4f668.js"><link rel="prefetch" href="/assets/js/85.e77e6e1e.js"><link rel="prefetch" href="/assets/js/86.d2ef0414.js"><link rel="prefetch" href="/assets/js/87.bf848bae.js"><link rel="prefetch" href="/assets/js/88.a52426df.js"><link rel="prefetch" href="/assets/js/89.b57aa852.js"><link rel="prefetch" href="/assets/js/9.b646ca99.js"><link rel="prefetch" href="/assets/js/90.f3adce23.js"><link rel="prefetch" href="/assets/js/91.aef49fa5.js"><link rel="prefetch" href="/assets/js/92.b5faa774.js"><link rel="prefetch" href="/assets/js/93.1106a757.js"><link rel="prefetch" href="/assets/js/94.8e0db68a.js"><link rel="prefetch" href="/assets/js/95.18fe0149.js"><link rel="prefetch" href="/assets/js/96.9256b873.js"><link rel="prefetch" href="/assets/js/97.94de60a0.js"><link rel="prefetch" href="/assets/js/98.f196f022.js"><link rel="prefetch" href="/assets/js/99.00436cae.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.64f7ac41.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/avatar.png" alt="coderqmj的博客" class="logo"> <span class="site-name can-hide">coderqmj的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  文章
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  琐碎
+</a></li></ul></div></div><div class="nav-item"><a href="https://leetcode-cn.com/u/2vgrNDufDX/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/coderqmj" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  文章
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  琐碎
+</a></li></ul></div></div><div class="nav-item"><a href="https://leetcode-cn.com/u/2vgrNDufDX/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/coderqmj" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>计算机网络</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/ComputerNet/HTTP.html" class="sidebar-link">1.HTTP相关</a></li><li><a href="/pages/ComputerNet/七层模型.html" class="sidebar-link">2.七/四/五层模型</a></li><li><a href="/pages/ComputerNet/浏览器缓存.html" class="sidebar-link">浏览器缓存</a></li><li><a href="/pages/ComputerNet/HTTPS.html" class="sidebar-link">HTTPS</a></li><li><a href="/pages/ComputerNet/浏览器安全.html" class="sidebar-link">浏览器安全</a></li><li><a href="/pages/ComputerNet/浏览器性能优化.html" class="sidebar-link">浏览器性能优化</a></li><li><a href="/pages/ComputerNet/HTTP历史.html" class="sidebar-link">HTTP历史</a></li><li><a href="/pages/ComputerNet/HTTP请求流程.html" class="sidebar-link">HTTP请求流程</a></li><li><a href="/pages/ComputerNet/JavaScript如何影响DOM树构建.html" class="sidebar-link">JavaScript如何影响DOM树构建</a></li><li><a href="/pages/ComputerNet/CSS如何影响首次白屏.html" class="sidebar-link">CSS如何影响首次白屏</a></li><li><a href="/pages/ComputerNet/分层合成：为什么CSS比JS高效.html" class="sidebar-link">分层合成：为什么CSS比JS高效</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>NODE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>构建工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构与算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>GIT教程</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>TypeScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>正则表达式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>项目</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>三方库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>实习遇到的问题及成长</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>腾讯工作的思考与总结</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>琐碎</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="前端模块化-commonjs-amd-cmd-es6"><a href="#前端模块化-commonjs-amd-cmd-es6" class="header-anchor">#</a> 前端模块化：CommonJS，AMD，CMD，ES6</h2> <p>前端模块化可以提供代码的复用率，方便管理。一般一个文件就是一个模块，有自己的作用域，只向外暴露特定的变量和函数。目前的前端模块化有CommonJS，AMD，CMD</p> <h2 id="一、commonjs"><a href="#一、commonjs" class="header-anchor">#</a> 一、CommonJS</h2> <p>Node.js是commonJS规范的主要实践者，它有四个重要的环境变量为模块化的实现提供支持：<code>module</code>、<code>exports</code>、<code>require</code>、<code>global</code>。实际使用时，用<code>module.exports</code>定义当前模块对外输出的接口（不推荐直接用<code>exports</code>），用<code>require</code>加载模块。</p> <div class="language- extra-class"><pre class="language-text"><code>// 定义模块math.js
+var basicNum = 0;
+function add(a, b) {
+  return a + b;
+}
+module.exports = { //在这里写上需要向外暴露的函数、变量
+  add: add,
+  basicNum: basicNum
+}
+
+// 引用自定义的模块时，参数包含路径，可省略.js
+var math = require('./math');
+math.add(2, 5);
+
+// 引用核心模块时，不需要带路径
+var http = require('http');
+http.createService(...).listen(3000);
+复制代码
+</code></pre></div><p>commonJS用同步的方式加载模块。在服务端，模块文件都存在本地磁盘，读取非常快，所以这样做不会有问题。但是在浏览器端，限于网络原因，更合理的方案是使用异步加载。</p> <h2 id="二、amd和require-js"><a href="#二、amd和require-js" class="header-anchor">#</a> 二、AMD和require.js</h2> <p>AMD规范采用异步方式加载模块，模块的加载不影响它后面语句的运行。所有依赖这个模块的语句，都定义在一个回调函数中，等到加载完成之后，这个回调函数才会运行。这里介绍用require.js实现AMD规范的模块化：用<code>require.config()</code>指定引用路径等，用<code>define()</code>定义模块，用<code>require()</code>加载模块。</p> <p>首先我们需要引入require.js文件和一个入口文件main.js。main.js中配置<code>require.config()</code>并规定项目中用到的基础模块。</p> <div class="language- extra-class"><pre class="language-text"><code>/** 网页中引入require.js及main.js **/
+&lt;script src=&quot;js/require.js&quot; data-main=&quot;js/main&quot;&gt;&lt;/script&gt;
+
+/** main.js 入口文件/主模块 **/
+// 首先用config()指定各模块路径和引用名
+require.config({
+  baseUrl: &quot;js/lib&quot;,
+  paths: {
+    &quot;jquery&quot;: &quot;jquery.min&quot;,  //实际路径为js/lib/jquery.min.js
+    &quot;underscore&quot;: &quot;underscore.min&quot;,
+  }
+});
+// 执行基本操作
+require([&quot;jquery&quot;,&quot;underscore&quot;],function($,_){
+  // some code here
+});
+</code></pre></div><p>引用模块的时候，我们将模块名放在<code>[]</code>中作为<code>reqiure()</code>的第一参数；如果我们定义的模块本身也依赖其他模块,那就需要将它们放在<code>[]</code>中作为<code>define()</code>的第一参数。</p> <div class="language- extra-class"><pre class="language-text"><code>// 定义math.js模块
+define(function () {
+    var basicNum = 0;
+    var add = function (x, y) {
+        return x + y;
+    };
+    return {
+        add: add,
+        basicNum :basicNum
+    };
+});
+// 定义一个依赖underscore.js的模块
+define(['underscore'],function(_){
+  var classify = function(list){
+    _.countBy(list,function(num){
+      return num &gt; 30 ? 'old' : 'young';
+    })
+  };
+  return {
+    classify :classify
+  };
+})
+
+// 引用模块，将模块放在[]内
+require(['jquery', 'math'],function($, math){
+  var sum = math.add(10,20);
+  $(&quot;#sum&quot;).html(sum);
+});
+</code></pre></div><h2 id="三、cmd和sea-js"><a href="#三、cmd和sea-js" class="header-anchor">#</a> 三、CMD和sea.js</h2> <p>require.js在申明依赖的模块时会在第一之间加载并执行模块内的代码：</p> <div class="language- extra-class"><pre class="language-text"><code>define([&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;], function(a, b, c, d, e, f) { 
+    // 等于在最前面声明并初始化了要用到的所有模块
+    if (false) {
+      // 即便没用到某个模块 b，但 b 还是提前执行了
+      b.foo()
+    } 
+});
+复制代码
+</code></pre></div><p>CMD是另一种js模块化方案，它与AMD很类似，不同点在于：AMD 推崇依赖前置、提前执行，CMD推崇依赖就近、延迟执行。此规范其实是在sea.js推广过程中产生的。</p> <div class="language- extra-class"><pre class="language-text"><code>/** AMD写法 **/
+define([&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;], function(a, b, c, d, e, f) { 
+     // 等于在最前面声明并初始化了要用到的所有模块
+    a.doSomething();
+    if (false) {
+        // 即便没用到某个模块 b，但 b 还是提前执行了
+        b.doSomething()
+    } 
+});
+
+/** CMD写法 **/
+define(function(require, exports, module) {
+    var a = require('./a'); //在需要时申明
+    a.doSomething();
+    if (false) {
+        var b = require('./b');
+        b.doSomething();
+    }
+});
+
+/** sea.js **/
+// 定义模块 math.js
+define(function(require, exports, module) {
+    var $ = require('jquery.js');
+    var add = function(a,b){
+        return a+b;
+    }
+    exports.add = add;
+});
+// 加载模块
+seajs.use(['math.js'], function(math){
+    var sum = math.add(1+2);
+});
+复制代码
+</code></pre></div><h2 id="四、es6-module"><a href="#四、es6-module" class="header-anchor">#</a> 四、ES6 Module</h2> <p>ES6 在语言标准的层面上，实现了模块功能，而且实现得相当简单，旨在成为浏览器和服务器通用的模块解决方案。其模块功能主要由两个命令构成：<code>export</code>和<code>import</code>。<code>export</code>命令用于规定模块的对外接口，<code>import</code>命令用于输入其他模块提供的功能。</p> <div class="language- extra-class"><pre class="language-text"><code>/** 定义模块 math.js **/
+var basicNum = 0;
+var add = function (a, b) {
+    return a + b;
+};
+export { basicNum, add };
+
+/** 引用模块 **/
+import { basicNum, add } from './math';
+function test(ele) {
+    ele.textContent = add(99 + basicNum);
+}
+复制代码
+</code></pre></div><p>如上例所示，使用<code>import</code>命令的时候，用户需要知道所要加载的变量名或函数名。其实ES6还提供了<code>export default</code>命令，为模块指定默认输出，对应的<code>import</code>语句不需要使用大括号。这也更趋近于ADM的引用写法。</p> <div class="language- extra-class"><pre class="language-text"><code>/** export default **/
+//定义输出
+export default { basicNum, add };
+//引入
+import math from './math';
+function test(ele) {
+    ele.textContent = math.add(99 + math.basicNum);
+}
+复制代码
+</code></pre></div><p>ES6的模块不是对象，<code>import</code>命令会被 JavaScript 引擎静态分析，在编译时就引入模块代码，而不是在代码运行时加载，所以无法实现条件加载。也正因为这个，使得静态分析成为可能。</p> <h2 id="五、-es6-模块与-commonjs-模块的差异"><a href="#五、-es6-模块与-commonjs-模块的差异" class="header-anchor">#</a> 五、 ES6 模块与 CommonJS 模块的差异</h2> <h3 id="_1-commonjs-模块输出的是一个值的拷贝-es6-模块输出的是值的引用。"><a href="#_1-commonjs-模块输出的是一个值的拷贝-es6-模块输出的是值的引用。" class="header-anchor">#</a> 1. CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用。</h3> <ul><li>CommonJS 模块输出的是值的拷贝，也就是说，一旦输出一个值，模块内部的变化就影响不到这个值。</li> <li>ES6 模块的运行机制与 CommonJS 不一样。JS 引擎对脚本静态分析的时候，遇到模块加载命令<code>import</code>，就会生成一个只读引用。等到脚本真正执行时，再根据这个只读引用，到被加载的那个模块里面去取值。换句话说，ES6 的<code>import</code>有点像 Unix 系统的“符号连接”，原始值变了，<code>import</code>加载的值也会跟着变。因此，ES6 模块是动态引用，并且不会缓存值，模块里面的变量绑定其所在的模块。</li></ul> <h3 id="_2-commonjs-模块是运行时加载-es6-模块是编译时输出接口。"><a href="#_2-commonjs-模块是运行时加载-es6-模块是编译时输出接口。" class="header-anchor">#</a> 2. CommonJS 模块是运行时加载，ES6 模块是编译时输出接口。</h3> <ul><li>运行时加载: CommonJS 模块就是对象；即在输入时是先加载整个模块，生成一个对象，然后再从这个对象上面读取方法，这种加载称为“运行时加载”。</li> <li>编译时加载: ES6 模块不是对象，而是通过 <code>export</code> 命令显式指定输出的代码，<code>import</code>时采用静态命令的形式。即在<code>import</code>时可以指定加载某个输出值，而不是加载整个模块，这种加载称为“编译时加载”。</li></ul> <p>CommonJS 加载的是一个对象（即<code>module.exports</code>属性），该对象只有在脚本运行完才会生成。而 ES6 模块不是对象，它的对外接口只是一种静态定义，在代码静态解析阶段就会生成。</p> <h2 id="一、commonjs-2"><a href="#一、commonjs-2" class="header-anchor">#</a> 一、CommonJs</h2> <h3 id="_1-exports与require"><a href="#_1-exports与require" class="header-anchor">#</a> 1.exports与require()</h3> <ul><li>require是一个函数，它有返回值，返回值是exports</li> <li>所以导入的时候可以使用解构</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// bar.js
+exports.name = 'qmj';
+exports.age = 18;
+
+// 导入
+const demo = require('./bar.js');
+demo = {
+	name: 'qmj',
+	age: 18
+}
+const {name, age} = require('./bar.js')
+</code></pre></div><h3 id="_2-module-exports"><a href="#_2-module-exports" class="header-anchor">#</a> 2.module.exports</h3> <ul><li>为什么有了exports还要有module.exports呢？</li> <li>其实CommonJS没有提到module.exports，但是Node中为了导出，实现了Module类，每个模块是Module的实例。</li> <li>真正导出的是 module.exports，在源码里 module.exports = exports;</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 内部源码</span>
+exports <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> exports<span class="token punctuation">;</span>
+这样做的目的是为了让module<span class="token punctuation">.</span>exports和exports指向同一个对象；
+</code></pre></div><h3 id="_3-require细节"><a href="#_3-require细节" class="header-anchor">#</a> 3.require细节</h3> <ul><li>require是一个函数，帮我们引入一个文件（模块）中导入的对象</li></ul> <h4 id="require的查找细节"><a href="#require的查找细节" class="header-anchor">#</a> require的查找细节</h4> <div class="language- extra-class"><pre class="language-text"><code>导入格式如：require(X):
+
+情况一：X是一个核心模块
+	直接返回核心模块，并停止查找
+	
+情况二：X是./ ../或 /
+	第一步：将X当做一个文件在对应的目录下查找：
+		1.有文件后缀名，按照后缀名的格式查找对应的文件
+		2.无后缀名，会按照下面顺序：
+			1）直接查找文件X
+			2）查找X.js文件
+			3）查找X.json文件
+			4）查找X.node文件
+	第二步：X作为一个目录
+		1.查找目录下面的index文件
+			1）查找X/index.js文件
+			2）查找X/index.json文件
+			3）查找X/index.node文件
+	第三步：没有找到
+		1.报错Not Found
+		
+情况三：直接是X，X并不是一个核心模块
+	1.是在/Users/didi/Documents/Project/Node下编写文件main.js
+		1）/Users/didi/Documents/Project/Node/node_modules
+		2）/Users/didi/Documents/Project/node_modules
+		3）/Users/didi/Documents/node_modules
+		4）/Users/didi/node_modules
+		5）/Users/node_modules
+    6）/node_modules
+  2.上面这些还没找到就直接返回Not Found
+</code></pre></div><h3 id="_4-模块的加载过程"><a href="#_4-模块的加载过程" class="header-anchor">#</a> 4.模块的加载过程</h3> <ul><li>commonJs加载是同步的，模块加载完之后才会进行下一步代码</li> <li>例子：先打印加载文件，再打印文本本身，</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// bar.js</span>
+consloe<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'qmj'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// index.js </span>
+<span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./bar.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'hello world'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// cmd node index.js</span>
+<span class="token comment">// result =&gt; qmj hello world</span>
+</code></pre></div><ul><li>模块在多次引入时，只会执行一次，因为被缓存
+<ul><li>每个模块对象都有一个属性：loaded</li> <li>false表示没有加载，true表示已经加载</li></ul></li> <li>模块被循环引用时，不会执行多次
+<ul><li>这种情况是一种闭环，加载顺序是按照图的深度优先遍历加载的</li> <li>main=&gt;aaa=&gt;ccc=&gt;ddd=&gt;eee=&gt;bbb</li> <li>之所以bbb后面不会加载ccc是因为ccc的loaded被设置为true了</li></ul></li></ul> <img src="/assets/img/require_01.129063e3.png" style="zoom:50%;"></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新于:</span> <span class="time">2/11/2021, 4:19:48 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.922e2828.js" defer></script><script src="/assets/js/2.d7ac843b.js" defer></script><script src="/assets/js/42.8e84c1e4.js" defer></script>
+  </body>
+</html>

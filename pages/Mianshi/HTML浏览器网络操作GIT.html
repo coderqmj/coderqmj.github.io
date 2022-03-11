@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一、计算机网络 | coderqmj的博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/avatar.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.64f7ac41.css" as="style"><link rel="preload" href="/assets/js/app.922e2828.js" as="script"><link rel="preload" href="/assets/js/2.d7ac843b.js" as="script"><link rel="preload" href="/assets/js/87.bf848bae.js" as="script"><link rel="prefetch" href="/assets/js/10.7b3d9b0c.js"><link rel="prefetch" href="/assets/js/100.486e622c.js"><link rel="prefetch" href="/assets/js/101.d6e1dc74.js"><link rel="prefetch" href="/assets/js/102.7dd0bb36.js"><link rel="prefetch" href="/assets/js/103.c70d0e4e.js"><link rel="prefetch" href="/assets/js/104.6cea9b68.js"><link rel="prefetch" href="/assets/js/105.88d5190c.js"><link rel="prefetch" href="/assets/js/106.0873e8a7.js"><link rel="prefetch" href="/assets/js/107.aca94093.js"><link rel="prefetch" href="/assets/js/108.bca217a4.js"><link rel="prefetch" href="/assets/js/109.5f4a8562.js"><link rel="prefetch" href="/assets/js/11.3db82a7b.js"><link rel="prefetch" href="/assets/js/110.4f43d13c.js"><link rel="prefetch" href="/assets/js/111.12faead2.js"><link rel="prefetch" href="/assets/js/112.6a100fc4.js"><link rel="prefetch" href="/assets/js/113.b635ecb3.js"><link rel="prefetch" href="/assets/js/114.2fc49843.js"><link rel="prefetch" href="/assets/js/115.9bbd97fe.js"><link rel="prefetch" href="/assets/js/116.0111b15f.js"><link rel="prefetch" href="/assets/js/117.2a08ade6.js"><link rel="prefetch" href="/assets/js/118.d5f21bef.js"><link rel="prefetch" href="/assets/js/119.a4028cab.js"><link rel="prefetch" href="/assets/js/12.0d96d9ee.js"><link rel="prefetch" href="/assets/js/120.24ca1007.js"><link rel="prefetch" href="/assets/js/121.cd8ad292.js"><link rel="prefetch" href="/assets/js/122.9e44a8bf.js"><link rel="prefetch" href="/assets/js/123.75a2e13c.js"><link rel="prefetch" href="/assets/js/124.fba7ba6c.js"><link rel="prefetch" href="/assets/js/125.751f3e3f.js"><link rel="prefetch" href="/assets/js/126.6546e225.js"><link rel="prefetch" href="/assets/js/127.e6ffe9f0.js"><link rel="prefetch" href="/assets/js/128.5ba61cba.js"><link rel="prefetch" href="/assets/js/129.5cf13129.js"><link rel="prefetch" href="/assets/js/13.f663b287.js"><link rel="prefetch" href="/assets/js/130.8cf31a88.js"><link rel="prefetch" href="/assets/js/131.a8879ecb.js"><link rel="prefetch" href="/assets/js/132.309606b3.js"><link rel="prefetch" href="/assets/js/133.4ca29821.js"><link rel="prefetch" href="/assets/js/134.5952e738.js"><link rel="prefetch" href="/assets/js/14.f62f380d.js"><link rel="prefetch" href="/assets/js/15.d8470657.js"><link rel="prefetch" href="/assets/js/16.642b34d5.js"><link rel="prefetch" href="/assets/js/17.449c4fca.js"><link rel="prefetch" href="/assets/js/18.979e104a.js"><link rel="prefetch" href="/assets/js/19.58c49ce8.js"><link rel="prefetch" href="/assets/js/20.26fae8f2.js"><link rel="prefetch" href="/assets/js/21.39a99ff9.js"><link rel="prefetch" href="/assets/js/22.f59b98cf.js"><link rel="prefetch" href="/assets/js/23.a92e121d.js"><link rel="prefetch" href="/assets/js/24.6b0ab34d.js"><link rel="prefetch" href="/assets/js/25.59b56b46.js"><link rel="prefetch" href="/assets/js/26.0aa4999f.js"><link rel="prefetch" href="/assets/js/27.e99a8129.js"><link rel="prefetch" href="/assets/js/28.c7dd852e.js"><link rel="prefetch" href="/assets/js/29.999d3392.js"><link rel="prefetch" href="/assets/js/3.1f6a410f.js"><link rel="prefetch" href="/assets/js/30.2efdf158.js"><link rel="prefetch" href="/assets/js/31.82f0b64f.js"><link rel="prefetch" href="/assets/js/32.68df0343.js"><link rel="prefetch" href="/assets/js/33.3a7ea0a7.js"><link rel="prefetch" href="/assets/js/34.687b3b61.js"><link rel="prefetch" href="/assets/js/35.39c120eb.js"><link rel="prefetch" href="/assets/js/36.4449a7d9.js"><link rel="prefetch" href="/assets/js/37.9532964a.js"><link rel="prefetch" href="/assets/js/38.144e8bb9.js"><link rel="prefetch" href="/assets/js/39.2abf6f30.js"><link rel="prefetch" href="/assets/js/4.bdb68f26.js"><link rel="prefetch" href="/assets/js/40.7fac4b90.js"><link rel="prefetch" href="/assets/js/41.9011a251.js"><link rel="prefetch" href="/assets/js/42.8e84c1e4.js"><link rel="prefetch" href="/assets/js/43.419e4228.js"><link rel="prefetch" href="/assets/js/44.79192e61.js"><link rel="prefetch" href="/assets/js/45.4e83ef2a.js"><link rel="prefetch" href="/assets/js/46.536b615b.js"><link rel="prefetch" href="/assets/js/47.81416819.js"><link rel="prefetch" href="/assets/js/48.f1a49526.js"><link rel="prefetch" href="/assets/js/49.901c2a97.js"><link rel="prefetch" href="/assets/js/5.610e1eb4.js"><link rel="prefetch" href="/assets/js/50.148207f2.js"><link rel="prefetch" href="/assets/js/51.317f41c5.js"><link rel="prefetch" href="/assets/js/52.a6cfe0c4.js"><link rel="prefetch" href="/assets/js/53.31c15faa.js"><link rel="prefetch" href="/assets/js/54.86e49cfb.js"><link rel="prefetch" href="/assets/js/55.7e2c8fc0.js"><link rel="prefetch" href="/assets/js/56.699dc67d.js"><link rel="prefetch" href="/assets/js/57.33564c0f.js"><link rel="prefetch" href="/assets/js/58.87b42eb5.js"><link rel="prefetch" href="/assets/js/59.507ceb32.js"><link rel="prefetch" href="/assets/js/6.ec9aaafc.js"><link rel="prefetch" href="/assets/js/60.5a66cc53.js"><link rel="prefetch" href="/assets/js/61.92b1805f.js"><link rel="prefetch" href="/assets/js/62.caf5e68e.js"><link rel="prefetch" href="/assets/js/63.7817522c.js"><link rel="prefetch" href="/assets/js/64.e857c815.js"><link rel="prefetch" href="/assets/js/65.54c955d6.js"><link rel="prefetch" href="/assets/js/66.4dbd3059.js"><link rel="prefetch" href="/assets/js/67.9b678f79.js"><link rel="prefetch" href="/assets/js/68.081769bd.js"><link rel="prefetch" href="/assets/js/69.68a243e0.js"><link rel="prefetch" href="/assets/js/7.7d5d2905.js"><link rel="prefetch" href="/assets/js/70.3cf2db12.js"><link rel="prefetch" href="/assets/js/71.ae28c841.js"><link rel="prefetch" href="/assets/js/72.91f99661.js"><link rel="prefetch" href="/assets/js/73.31290ec1.js"><link rel="prefetch" href="/assets/js/74.3b64e893.js"><link rel="prefetch" href="/assets/js/75.816b9303.js"><link rel="prefetch" href="/assets/js/76.decf1ed4.js"><link rel="prefetch" href="/assets/js/77.d27ebbbb.js"><link rel="prefetch" href="/assets/js/78.2222d4be.js"><link rel="prefetch" href="/assets/js/79.256139d8.js"><link rel="prefetch" href="/assets/js/8.42123a36.js"><link rel="prefetch" href="/assets/js/80.16680d3c.js"><link rel="prefetch" href="/assets/js/81.2f786598.js"><link rel="prefetch" href="/assets/js/82.911631e1.js"><link rel="prefetch" href="/assets/js/83.4cb96d07.js"><link rel="prefetch" href="/assets/js/84.06e4f668.js"><link rel="prefetch" href="/assets/js/85.e77e6e1e.js"><link rel="prefetch" href="/assets/js/86.d2ef0414.js"><link rel="prefetch" href="/assets/js/88.a52426df.js"><link rel="prefetch" href="/assets/js/89.b57aa852.js"><link rel="prefetch" href="/assets/js/9.b646ca99.js"><link rel="prefetch" href="/assets/js/90.f3adce23.js"><link rel="prefetch" href="/assets/js/91.aef49fa5.js"><link rel="prefetch" href="/assets/js/92.b5faa774.js"><link rel="prefetch" href="/assets/js/93.1106a757.js"><link rel="prefetch" href="/assets/js/94.8e0db68a.js"><link rel="prefetch" href="/assets/js/95.18fe0149.js"><link rel="prefetch" href="/assets/js/96.9256b873.js"><link rel="prefetch" href="/assets/js/97.94de60a0.js"><link rel="prefetch" href="/assets/js/98.f196f022.js"><link rel="prefetch" href="/assets/js/99.00436cae.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.64f7ac41.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/avatar.png" alt="coderqmj的博客" class="logo"> <span class="site-name can-hide">coderqmj的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  文章
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  琐碎
+</a></li></ul></div></div><div class="nav-item"><a href="https://leetcode-cn.com/u/2vgrNDufDX/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/coderqmj" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  文章
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  琐碎
+</a></li></ul></div></div><div class="nav-item"><a href="https://leetcode-cn.com/u/2vgrNDufDX/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/coderqmj" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>计算机网络</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/ComputerNet/HTTP.html" class="sidebar-link">1.HTTP相关</a></li><li><a href="/pages/ComputerNet/七层模型.html" class="sidebar-link">2.七/四/五层模型</a></li><li><a href="/pages/ComputerNet/浏览器缓存.html" class="sidebar-link">浏览器缓存</a></li><li><a href="/pages/ComputerNet/HTTPS.html" class="sidebar-link">HTTPS</a></li><li><a href="/pages/ComputerNet/浏览器安全.html" class="sidebar-link">浏览器安全</a></li><li><a href="/pages/ComputerNet/浏览器性能优化.html" class="sidebar-link">浏览器性能优化</a></li><li><a href="/pages/ComputerNet/HTTP历史.html" class="sidebar-link">HTTP历史</a></li><li><a href="/pages/ComputerNet/HTTP请求流程.html" class="sidebar-link">HTTP请求流程</a></li><li><a href="/pages/ComputerNet/JavaScript如何影响DOM树构建.html" class="sidebar-link">JavaScript如何影响DOM树构建</a></li><li><a href="/pages/ComputerNet/CSS如何影响首次白屏.html" class="sidebar-link">CSS如何影响首次白屏</a></li><li><a href="/pages/ComputerNet/分层合成：为什么CSS比JS高效.html" class="sidebar-link">分层合成：为什么CSS比JS高效</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>NODE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>构建工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构与算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>GIT教程</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>TypeScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>正则表达式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>项目</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>三方库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>实习遇到的问题及成长</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>腾讯工作的思考与总结</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>琐碎</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="一、计算机网络"><a href="#一、计算机网络" class="header-anchor">#</a> 一、计算机网络</h2> <h3 id="_1-http与https区别"><a href="#_1-http与https区别" class="header-anchor">#</a> 1.http与https区别</h3> <div class="language-\ extra-class"><pre class="language-text"><code>http相当于在网络上裸奔         https就是穿了衣服。
+http在传输数据的时候是明文的		https传输数据是经过SSL加密的
+安全性低						         安全性高
+不需要ca证书，成本低				    需要ca证书，需要一定的费用
+80端口						           443端口
+http无状态连接
+</code></pre></div><h3 id="_2-七层-四层-五层协议"><a href="#_2-七层-四层-五层协议" class="header-anchor">#</a> 2.七层/四层/五层协议</h3> <p><img src="D:%5CNote%5C%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%5C%E4%B8%83%E5%B1%82%E5%8D%8F%E8%AE%AE.png" alt="七层协议"></p> <ul><li>应用层： DNS/HTTP/FTP/SMTP</li> <li>运输层：TCP/UDP</li></ul> <h3 id="_3-输入url到实现页面的过程"><a href="#_3-输入url到实现页面的过程" class="header-anchor">#</a> 3.输入url到实现页面的过程</h3> <ol><li>DNS解析，把域名解析成IP地址</li> <li>客户端和服务端建立连接</li> <li>客户端发起HTTP请求</li> <li>服务器处理请求并返回数据</li> <li>浏览器接收数据并解析</li> <li>断开连接</li></ol> <h3 id="_4-base64和url的区别"><a href="#_4-base64和url的区别" class="header-anchor">#</a> 4.base64和url的区别</h3> <div class="language- extra-class"><pre class="language-text"><code>标准的Base64并不适合直接放在URL里传输，因为URL编码器会把标准Base64中的“/”和“+”字符变为形如“%XX”的形式.
+</code></pre></div><h3 id="_5-base64"><a href="#_5-base64" class="header-anchor">#</a> 5.base64</h3> <div class="language- extra-class"><pre class="language-text"><code>特点：
+	1.便于网络传输
+	2.不可见性
+区分：
+	1.base64是编码(encodeing) 而不是加密(encryption)
+应用
+	1.图片存储是2进制的，而不是文本形式，要传输他的话，要将2进制转为文本形式，这个时候就可以用base64
+</code></pre></div><h3 id="_4-http状态码及其含义"><a href="#_4-http状态码及其含义" class="header-anchor">#</a> 4.HTTP状态码及其含义</h3> <ul><li><code>1xx</code>:状态信息码
+<ul><li><code>100 continue</code> 继续</li></ul></li> <li><code>2xx</code>: 成功状态码(表示正常处理)
+<ul><li>200 OK</li> <li>201 请求成功并且创建了服务器资源</li> <li>202 服务器接受请求，但并未处理</li> <li>204 <code>No Content</code>成功但没有数据返回</li></ul></li> <li><code>3xx</code>重定向
+<ul><li><code>301 Moved Permanently</code> 永久重定向</li> <li><code>302 Found</code> 临时重定向</li> <li><code>304 Not Modified</code> 资源找到，但未符合条件</li></ul></li> <li><code>4xx</code> 客户端错误
+<ul><li><code>400 Bad Request</code> 服务器无理解请求的格式，不要再次发起请求</li> <li><code>401 Unauthorized</code> 未授权(未登录，无token...)</li> <li><code>403</code> 禁止访问</li> <li><code>404</code> 找不到与URI匹配的资源</li></ul></li> <li><code>5xx</code> 服务器错误
+<ul><li><code>500 Internal Server Error</code> 最常见的错误</li> <li><code>503 Service Unavailable</code> 服务器暂时无法处理请求</li></ul></li></ul> <h3 id="_5-https加密过程"><a href="#_5-https加密过程" class="header-anchor">#</a> 5.HTTPS加密过程</h3> <div class="language- extra-class"><pre class="language-text"><code>原理-&gt;过程
+
+1.客户端向服务器发起HTTPS请求
+2.服务器创建公钥私钥，将包含公钥的数字证书发送给客户端
+3.客户端对证书进行验证，验证通过后公钥将密钥进行加密
+4.客户端将加密过后的密钥发送给服务器
+5.服务器用自己的私钥对密钥进行解密
+6.之后就通过对称性加密的方式进行加密通信
+</code></pre></div><h3 id="_6-http缓存"><a href="#_6-http缓存" class="header-anchor">#</a> 6.HTTP缓存</h3> <div class="language- extra-class"><pre class="language-text"><code>强缓存：
+	HTTPCache-Control首部和Expries首部，给每个文档添加一个过时日期，浏览器再次发起请求的时候，就会以当前时间和过期时间进行比对，没过期，命中，过期，就去服务器请求新鲜的数据.
+	Cache-Control: max-age:可以设置最大使用事件，
+	Expires:设置一个过期的日期，但是修改客户端的事件可以影响命中缓存，优先用cache
+	
+协商缓存：
+	资源到期了，并不意味资源发生改变，没改变就无需再次发起请求。客户端和服务端可以通过某种验证机制去判断当前请求是否可以使用缓存。所以第一次请求的时候浏览器就会把响应头部的缓存标识保存起来。再次请求就会带上这个头部。服务器验证可用，就是304，不可用就是200
+	
+	Last-modified/If-Modified-Since：Last-modified服务端资源最后修改时间，由服务器响应给浏览器，浏览器将它保存为If-Modified-Since。再次发起请求就会比对这两个，一样就表示没修改过，返回304。不一样就是修改过了。返回200。
+	
+	Etag/If-None-Match：Etag是服务器生成的hash字符串，表示文件唯一标识符，在请求时由服务器发送给浏览器，浏览器保存为If-None-Match，再次发起请求时，会进行对比，一样就304，不一样200了
+	
+	区别：
+		Etag精确度比Last-Modified高，因为修改时间变了，但是你内容没变，所以Etag更好
+</code></pre></div><h3 id="_7-dns运行过程-dns性能优化的方法"><a href="#_7-dns运行过程-dns性能优化的方法" class="header-anchor">#</a> 7.DNS运行过程，DNS性能优化的方法？</h3> <ul><li><p><strong>DNS作用</strong></p></li> <li><p>把域名解析成相应的ip地址</p></li> <li><p><strong>DNS过程</strong></p></li> <li><p>1.<strong>递归查询</strong></p> <ul><li><img src="C:%5CUsers%5C%E9%82%B1%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1584711632672.png" alt="1584711632672"></li> <li>1.输入 <strong>域名</strong>后，<strong>客户端</strong>向<strong>本地DNS服务器</strong>要该域名的<strong>IP地址</strong>。</li> <li>2.<strong>本地DNS服务器</strong>没有，本地DNS服务器找<strong>根域名服务器</strong>要.</li> <li>3.根域名服务器没有，根服务器找A顶级域名服务器要，逐级向下找</li> <li>4.找到后把该域名逐级返回到<strong>客户端</strong>，并保存到缓存，以备下一次使用</li></ul></li> <li><p>2.<strong>迭代查询</strong></p> <ul><li><img src="C:%5CUsers%5C%E9%82%B1%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1584712482251.png" alt="1584712482251"></li> <li>全是客户端进行询问</li></ul></li> <li><p><strong>总结</strong></p> <ul><li>输入域名➡️操作系统检查本地host文件是否有映射关系 false？ ➡️ 客户端向本地DNS发起查询 ➡️ 采用递归查询或者迭代查询.</li></ul></li> <li><p><strong>DNS优化</strong></p> <ul><li><p>减少<code>DNS</code>请求数量</p> <ul><li>DNS查找数等于页面上不同的主机名数，包括页面URL，图片，脚本文件，样式表等的主机名，减少不同的主机名就可以减少DNS查找</li></ul></li> <li><p>缩短<code>DNS</code>请求时间</p> <ul><li><p>预加载</p> <ul><li><p><code>DNS Prefetch</code>让具有此属性的域名不需要用户点击链接就可以在后台解析，则域名解析和内容载入是串行的网络操作，减少等待时间.</p></li> <li><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>dns-prefetch<span class="token punctuation">&quot;</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>//atanx.alicdn.com<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></li></ul></li></ul></li></ul></li></ul> <h3 id="_8-http0-9-1-0-1-1-2-0"><a href="#_8-http0-9-1-0-1-1-2-0" class="header-anchor">#</a> 8.HTTP0.9/1.0/1.1/2.0</h3> <div class="language- extra-class"><pre class="language-text"><code>1.HTTP0.9:
+	就是请求+响应的模式，tcp三次握手连接+四次挥手断开连接
+	
+2.HTTP1.0
+	1.在HTTP1.0里面就可以展示多种文件类型，js，css，图片，视频，声音；
+	2.在HTTP1.0里面可以设置请求头，响应头可以满足多种类型的数据传输
+	3.accept：text/html accept-encoding：gzip， accept-Charset: ISO-8859-1,utf-8
+	4.但是每一次请求数据都得进行一次连接和断开连接，消耗性能
+	5.缓存机制，状态码，用户代理（客户端基础信息）
+
+3.HTTP1.1
+	1.持久化连接（默认开启）：多次请求数据则不需要断开连接；连接一次可以进行多次请求响应；
+	2.缺点：队头阻塞：只能上一次请求响应完成才会进行下一次请求；那么就有可能阻塞后面的请求
+	3.引入Cookie：
+	4.问题：对带宽的利用率低（tcp启动慢，开启多条tcp连接，队头阻塞）
+	5.带宽竞争，有可能先请求了不重要的资源，而重要的资源再后面请求到
+
+4.HTTP2.0
+	0.原因：tcp会竞争带宽，队头阻塞
+	1.多路复用解决TCP竞争：就是一个域名只是用一个tcp长连接去传输数据，这样就不会竞争
+	2.解决队头阻塞：正在执行的请求卡住就阻塞后面的，所以实现了资源并行请求，不按照顺讯返回，谁好了谁返回
+	3.头部压缩：对响应头请求头进行了压缩，虽然单个头部不大，但是在大项目里面有几百个资源，如果把它们压缩到原来的20%，那也能提高很多性能
+	4.设置请求的优先级，有些比较重要希望可以先对他进行请求
+</code></pre></div><h3 id="_9-tcp和udp的区别-ip和端口号的区别"><a href="#_9-tcp和udp的区别-ip和端口号的区别" class="header-anchor">#</a> 9.tcp和udp的区别，IP和端口号的区别</h3> <div class="language- extra-class"><pre class="language-text"><code>1.TCP 面向连接的			UDP是无连接的
+2.TCP安全性高			   UDP安全性低
+3.效率低				     效率高
+4.TCP具有数据包排序机制，把乱序的数据包还原成完整的文件	大文件被拆分成小数据包传输，UDP是不知道如何组装，就无法还原成完整文件
+5.TCP数据包丢失提供重新传机制，保证了数据的完整性  UDP数据包传输的过程中会丢失，不会重新传
+
+ip：负责把数据包交给主机
+端口号：负责把数据包交给某一个具体的应用
+</code></pre></div><h3 id="_10-知道哪些content-type"><a href="#_10-知道哪些content-type" class="header-anchor">#</a> 10.知道哪些content-type</h3> <div class="language- extra-class"><pre class="language-text"><code>1.text/plain		文本类型
+2.text/css			css类型
+3.text/html			html类型
+4.application/json json类型
+5.application/JavaScript js类型
+</code></pre></div><h3 id="_11-http报文结构-有哪些header"><a href="#_11-http报文结构-有哪些header" class="header-anchor">#</a> 11.HTTP报文结构，有哪些header</h3> <div class="language- extra-class"><pre class="language-text"><code>请求报文结构：
+	1.请求行：请求方法（Method） + 空格 + 统一资源标识符（URI） + 空格 + HTTP版本 + CRLF 
+	2.请求头：字段名 + 冒号 + 值 + CRLF 
+		Referer：后面路径也带上
+		Connection，Cookie，Origin，Content-Length
+	3.空行： 回车符（CR）+ 换行符（LF
+	4.请求体： 由用户自定义添加，如post的body等；
+
+	
+响应报文结构：
+	1.状态行：HTTP版本 + 空格 + 状态码 + 空格 + 状态码描述 + CR LF ；
+	2.响应头：字段名 + 冒号 + 值 + CR LF ；
+		Access-Control-Allow-Headers，Connection，Content-Type，Set-Cookie
+	3.空行： 回车符（CR）+ 换行符（LF） ；
+	4.响应体： 由用户自定义添加，如post的body等；
+</code></pre></div><h3 id="_12-http请求流程"><a href="#_12-http请求流程" class="header-anchor">#</a> 12.HTTP请求流程</h3> <div class="language- extra-class"><pre class="language-text"><code>构查备等连发
+1.构建请求行，请求方法/请求URI/HTTP版本
+2.在本地查找缓存，有就拦截请求，返回该资源副本，减少服务器压力
+3.准备IP和端口：
+	1.通过DNS解析域名，得到IP
+	2.解析URL有无端口号，没有默认80
+4.等待TCP队列
+	1.一个域名6个连接，10个TCP请求的话，4个需要排队，少于6，则进入连接
+5.建立连接
+	三次握手
+6.发送HTTP请求
+	建立连接之后，浏览器就可以和服务器通信
+                              
+</code></pre></div><h3 id="_13-http响应流程"><a href="#_13-http响应流程" class="header-anchor">#</a> 13.HTTP响应流程</h3> <div class="language- extra-class"><pre class="language-text"><code>1.返回请求
+ 处理好请求返回数据给浏览器
+2.关闭连接
+ 	一般情况下，直接关闭连接即可，但是如或有connection:keepAlive，就保持长连接，节省下一次的连接时间
+3.重定向
+</code></pre></div><h3 id="_14-第二次打开网页保持登录状态"><a href="#_14-第二次打开网页保持登录状态" class="header-anchor">#</a> 14.第二次打开网页保持登录状态</h3> <div class="language- extra-class"><pre class="language-text"><code>1.使用了setCookie字段
+2.第一次登陆成功，后端生成用户身份的字符串，保存响应头setCookie中，返回给前端。
+3.浏览器解析响应头，遇到setCookie，保存在本地。
+4.再次访问时，就会读取本地setCookie信息，并且在请求头把它带上发送给服务器
+5.服务器验证，通过后把该用户的信息发送给浏览器
+</code></pre></div><h3 id="_14-多个网站共享登录状态"><a href="#_14-多个网站共享登录状态" class="header-anchor">#</a> 14.多个网站共享登录状态</h3> <div class="language- extra-class"><pre class="language-text"><code>在多个网站之间共享登录状态指的就是单点登录，多个应用系统中，用户只需要登录一次就可以访问所有互相信任的应用系统。
+
+实现方法：将用户信息验证中心独立出来，作为一个单独的认证中心，这个认证中心用于判断客户端发送的账号秘法的正确性，然后向客户端返回对应的用户信息，并且返回由服务器端秘钥加密的登录信息的token给客户端，且具有时效性。当一个网站跳到另外一个时，通过url参数茶传递token，然后该网站把token传给认证中心，认证中心对token进行解密后验证，如果没失效，就返回用户对应的信息，失效则重定向。
+</code></pre></div><h3 id="_15-网络的七层模型-各自有什么作用-为什么要进行分层"><a href="#_15-网络的七层模型-各自有什么作用-为什么要进行分层" class="header-anchor">#</a> 15.网络的七层模型，各自有什么作用，为什么要进行分层</h3> <h3 id="_16如果发起一个请求-又发起了一个请求-但是第一个请求的结果在第二个请求之后到达"><a href="#_16如果发起一个请求-又发起了一个请求-但是第一个请求的结果在第二个请求之后到达" class="header-anchor">#</a> 16如果发起一个请求，又发起了一个请求，但是第一个请求的结果在第二个请求之后到达</h3> <div class="language- extra-class"><pre class="language-text"><code>
+</code></pre></div><h3 id="_17-tcp三次握手-四次挥手"><a href="#_17-tcp三次握手-四次挥手" class="header-anchor">#</a> 17.TCP三次握手，四次挥手</h3> <div class="language- extra-class"><pre class="language-text"><code>三次握手：确保双方都有发送和接收的能力
+
+四次挥手：因TCP是全双工的，所以连接的拆除需要单独将两个通道分别拆除。
+	1.如果是两次，那么会是半关闭状态，还有一端可以发送，另一端接收。
+	以客户端主动发起为例：
+		1.客户端发起请求给服务端，FIN标识（为1），客户端序列号N。
+		2.服务端接收到包含FIN的请求消息后，校验无误后发确认请求ACK消息给客户端，ACK(1)，Seq=序列号N+1；
+		3.服务端像上面一样做，断开另外一个通道
+因为TCP是一个全双工协议，必须单独拆除每一条信道。4次挥手的目的是终止数据传输，并回收资源，此时两个端点两个方向的序列号已经没有了任何关系，必须等待两方向都没有数据传输时才能拆除虚链路
+</code></pre></div><h3 id="_17-tls握手过程"><a href="#_17-tls握手过程" class="header-anchor">#</a> 17.TLS握手过程</h3> <h3 id="_18-简单请求非简单请求"><a href="#_18-简单请求非简单请求" class="header-anchor">#</a> 18.简单请求非简单请求</h3> <div class="language- extra-class"><pre class="language-text"><code>简单请求：
+	1.HTTP方法是下面之一：HEAD GET POST
+	2.HTTP头部信息不超出以下几种字段：
+		1.AcceptAccept
+    2.Accept-Language
+    3.Content-Type，但仅能是下列之一
+      application/x-www-form-urlencoded
+      multipart/form-data
+      text/plain
+ 
+</code></pre></div><h3 id="_18-数字证书中都包括哪些内容"><a href="#_18-数字证书中都包括哪些内容" class="header-anchor">#</a> 18.数字证书中都包括哪些内容？</h3> <div class="language- extra-class"><pre class="language-text"><code>最简单的数字证书，包含一个公钥，名称，证书授权中心的数字签名。
+</code></pre></div><h3 id="_19-http2-头部压缩是如何实现的-多路复用的原理"><a href="#_19-http2-头部压缩是如何实现的-多路复用的原理" class="header-anchor">#</a> 19.HTTP2 头部压缩是如何实现的，多路复用的原理？</h3> <div class="language- extra-class"><pre class="language-text"><code>
+</code></pre></div><h3 id="_20-什么是字节流-什么事数据报"><a href="#_20-什么是字节流-什么事数据报" class="header-anchor">#</a> 20.什么是字节流，什么事数据报</h3> <div class="language- extra-class"><pre class="language-text"><code>1.字节流：TCP
+	我的理解是对数据传输的一种抽象化，让一端可以传输字节给另外一端的通信方式，一般都是双向的，是一种可靠的。
+2.数据报：
+	我的理解是他就是UDP，传输方式，无需连接即可传输数据，但是不这么可靠
+</code></pre></div><h3 id="_21-http请求的幂等概念的理解以及常见请求的幂等性"><a href="#_21-http请求的幂等概念的理解以及常见请求的幂等性" class="header-anchor">#</a> 21.http请求的幂等概念的理解以及常见请求的幂等性</h3> <div class="language- extra-class"><pre class="language-text"><code>1.文档：相同的请求执行多次和执行一次的副作用是一样的。
+2.幂等的方法有哪些：
+	GET，HEAD，PUT，DELETE，OPTIONS 和 TRACE 方法都是幂等的。
+3.但POST不是幂等的，常用于修改资源，就不满足传入同一个参数，返回结果不一样了
+</code></pre></div><h3 id="_22-http的option预请求"><a href="#_22-http的option预请求" class="header-anchor">#</a> 22.HTTP的option预请求</h3> <div class="language- extra-class"><pre class="language-text"><code>与head类似，是客户端用于查看服务器的性能 。JavaScript的XMLHttpRequest对象进行CORS跨域资源共享时，就是使用OPTIONS方法发送嗅探请求，以判断是否有对指定资源的访问权限。
+1.获取服务器支持HTTP请求方法；黑客比较常用
+2.检查服务器性能，跨域时，向另外一个域名发送options请求头，可以判断发送的请求是否安全。
+3.属于复杂请求；
+</code></pre></div><h3 id="_23-什么是cdn-如何查找最近的"><a href="#_23-什么是cdn-如何查找最近的" class="header-anchor">#</a> 23.什么是CDN，如何查找最近的</h3> <div class="language- extra-class"><pre class="language-text"><code>CDN：内容分发网
+将网站的内容发布到最接近用户的站点，让用户就近获取资源，避免了网络拥塞情况，提高响应速度。解决了网络单宽小，用户访问量大等问题。
+
+根据用户的IP地址，去寻找一台离用户最近的服务器。
+</code></pre></div><h3 id="_24-为什么tcp是可靠传输"><a href="#_24-为什么tcp是可靠传输" class="header-anchor">#</a> 24.为什么TCP是可靠传输</h3> <div class="language- extra-class"><pre class="language-text"><code>1.TCP具有数据重传机制：
+	TCP不像UDP在传输数据过程中会丢包，每发出一个数据包，都会有一个确认接收，超过一定时间，会被判断成没有接受到，会重新发送
+2.具有编排序号能力
+	将传输数据分为各个小数据包，传到浏览器，能拼接成完整的数据
+</code></pre></div><h3 id="_25-介绍下websocket"><a href="#_25-介绍下websocket" class="header-anchor">#</a> 25.介绍下websocket</h3> <h3 id="_26-tcp-头部大小是固定的吗"><a href="#_26-tcp-头部大小是固定的吗" class="header-anchor">#</a> 26.TCP 头部大小是固定的吗？</h3> <h3 id="_27-websocket-如何连接-服务端给客户端发送的http状态码是什么"><a href="#_27-websocket-如何连接-服务端给客户端发送的http状态码是什么" class="header-anchor">#</a> 27.WebSocket 如何连接？服务端给客户端发送的http状态码是什么？</h3> <h3 id="_10-503"><a href="#_10-503" class="header-anchor">#</a> 10.503</h3> <h2 id="二、html"><a href="#二、html" class="header-anchor">#</a> 二、HTML</h2> <h3 id="_1-h5标签"><a href="#_1-h5标签" class="header-anchor">#</a> 1.H5标签</h3> <div class="language- extra-class"><pre class="language-text"><code>header/footer/article/nav/section/video/audio/canvas
+</code></pre></div><h3 id="_2-get和post"><a href="#_2-get和post" class="header-anchor">#</a> 2.get和post</h3> <div class="language- extra-class"><pre class="language-text"><code>浏览器：
+	get用于请求资源		post用于提交表单
+	get参数url可见		 post参数不可见
+	get请求可以缓存		post请求不可以缓存
+	get数据一般2-4k		 post请求传输数据大小php.inis设定
+	get一般用于查询的数据 post用于添加修改删除之类的。
+	get安全性低一点			post安全性比get高   解释：登录传参 get=&gt;login?name='qmj'&amp;password=123
+</code></pre></div><h3 id="_3-post数据类型"><a href="#_3-post数据类型" class="header-anchor">#</a> 3.post数据类型</h3> <div class="language- extra-class"><pre class="language-text"><code>1.application/x-www-form-urlencoded(最常见)
+	原生表单，不设置enctype，就用这种方式
+	
+2.multipart/form-data(常用)
+	必须让表单的enctype等于multipart/form-data
+	
+3. application/json
+
+4.text/xml
+</code></pre></div><h3 id="_4-行内元素有哪些-块级元素有哪些-空-void-元素有那些-行内元素和块级元素有什么区别"><a href="#_4-行内元素有哪些-块级元素有哪些-空-void-元素有那些-行内元素和块级元素有什么区别" class="header-anchor">#</a> 4.行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？行内元素和块级元素有什么区别？</h3> <ul><li>行内元素有：<code>a b span img input select strong</code></li> <li>块级元素有：<code>div ul ol li dl dt dd h1 h2 h3 h4… p</code></li> <li>空元素： <code>&lt;br&gt; &lt;hr&gt; &lt;img&gt; &lt;input&gt; &lt;link&gt; &lt;meta&gt;</code></li> <li>行内元素不可以设置宽高，不独占一行</li> <li>块级元素可以设置宽高，独占一行</li></ul> <h3 id="_5-doctype作用-严格模式与混杂模式如何区分-它们有何意义"><a href="#_5-doctype作用-严格模式与混杂模式如何区分-它们有何意义" class="header-anchor">#</a> 5. Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?</h3> <ul><li><code>!DOCTYPE html</code>位于文档的最前面，告诉浏览器的解析器用什么规范去解析这个文档</li></ul> <h3 id="_6-操作节点-node-的方法"><a href="#_6-操作节点-node-的方法" class="header-anchor">#</a> 6.操作节点(Node)的方法</h3> <div class="language- extra-class"><pre class="language-text"><code>1.appendChild		添加节点
+2.removeChild		删除节点
+3.replaceChild		替换几点		返回被替换节点
+4.hasChildNodes		是否有子节点	   返回布尔值
+</code></pre></div><h3 id="_7-domcontentloaded和load区别"><a href="#_7-domcontentloaded和load区别" class="header-anchor">#</a> 7.DOMContentLoaded和load区别</h3> <div class="language- extra-class"><pre class="language-text"><code>DOMContentLoaded：
+	当初始的HTML文档被完全加载和解析完成之后，DOMContentLoaded事件被触发，而无需等待样式表、图像和子框架的完全加载。
+load:
+	整个页面及所有依赖资源如样式表和图片都已完成加载时，将触发load事件。
+</code></pre></div><h3 id="_8-html5新特性"><a href="#_8-html5新特性" class="header-anchor">#</a> 8.HTML5新特性</h3> <div class="language- extra-class"><pre class="language-text"><code>1.语义化标签
+	header，footer，article，nav，audio，video
+2.2D/3D:
+	canvas，svg
+3.多媒体
+	audio、video
+4.离线存储
+	localStorage，sessionStorage，indexDB
+</code></pre></div><h3 id="_9-queryselector可以选择伪元素吗"><a href="#_9-queryselector可以选择伪元素吗" class="header-anchor">#</a> 9.querySelector可以选择伪元素吗</h3> <div class="language- extra-class"><pre class="language-text"><code>不能，MDN上面查过，注意事项里面提到CSS伪类，伪元素无法返回任何元素 
+</code></pre></div><h3 id="_10-前端渲染和后端渲染区别"><a href="#_10-前端渲染和后端渲染区别" class="header-anchor">#</a> 10.前端渲染和后端渲染区别</h3> <div class="language- extra-class"><pre class="language-text"><code>服务端渲染：
+	由后端去管理路由的匹配，每个url在后端对应一个资源，在后端渲染好再展示到前端上。
+	服务器做的事情：
+		url发送到服务器，服务器自己正则匹配，控制器处理生成HTML和数据，返回给前端
+
+前端渲染：
+	由前端进行路由匹配规则，history和hash模式。
+	html，css，js资源都是由静态资源服务器返回的。
+	数据通过接口进行请求，由后端返回数据。
+</code></pre></div><h2 id="三、浏览器"><a href="#三、浏览器" class="header-anchor">#</a> 三、浏览器</h2> <h3 id="_1-跨域"><a href="#_1-跨域" class="header-anchor">#</a> 1.跨域</h3> <div class="language- extra-class"><pre class="language-text"><code>1.jsonp
+	利用浏览器没有跨域限制的漏送，通过script指向要访问的地址，
+	并提供一个回调函数去接收通讯时接收的数据。
+	但是只限用于get请求
+	
+2.cors
+	这个需要前后端同时支持，前端会自动实现，关键在于后端，服务端
+	设置：
+		Access-Control-Allow-Origin 就可以开启CORS
+		Access-Control-Allow-Headers
+		Access-Control-Allow-Methods 哪些方法
+	
+3.document.domain
+	该方式只能用于二级域名相同的情况下，如：a.test.com与b.test.com
+	只要给页面添加document.domain='根域名'
+</code></pre></div><h3 id="_2-浏览器缓存机制"><a href="#_2-浏览器缓存机制" class="header-anchor">#</a> 2.浏览器缓存机制</h3> <h3 id="_3-如何进行网站的性能优化"><a href="#_3-如何进行网站的性能优化" class="header-anchor">#</a> 3.如何进行网站的性能优化</h3> <div class="language- extra-class"><pre class="language-text"><code>1.请求HTML数据和构建DOM中间有空闲时间，是瓶颈
+</code></pre></div><p><strong>三件套+server+图片</strong></p> <ul><li><code>content</code>方面
+<ul><li>减少<code>HTTP</code>请求：合并文件、<code>CSS</code>精灵、<code>inline Image</code></li> <li>减少<code>DNS</code>查询：<code>DNS</code>缓存、将资源分布到恰当数量的主机名</li> <li>减少<code>DOM</code>元素数量</li> <li>使用iconfont</li> <li>删除不必要的元素</li></ul></li> <li><code>Server</code>方面
+<ul><li>使用<code>CDN</code></li> <li>配置<code>ETag</code></li> <li>对组件使用<code>Gzip</code>压缩</li></ul></li> <li><code>css</code>方面
+<ul><li>将样式表放到页面顶部</li> <li>不使用<code>CSS</code>表达式</li> <li>使用<code>link</code>，不使用<code>@import</code></li> <li>避免使用表格</li></ul></li> <li><code>Javascript</code>方面
+<ul><li>将脚本放到页面底部 （自上而下的，先优先加载内容和样式，再去解析脚本）</li> <li>将<code>javascript</code>和<code>css</code>从外部引入</li> <li>压缩<code>javascript</code>和<code>css</code></li> <li>删除不需要的脚本</li> <li>减少<code>DOM</code>访问 (重排、重绘，消耗CPU)</li></ul></li> <li>图片方面
+<ul><li>优化图片：根据实际颜色需要选择色深、压缩</li> <li>优化<code>css</code>精灵</li> <li>不要在<code>HTML</code>中拉伸图片</li></ul></li></ul> <h3 id="_4-浏览器渲染ui"><a href="#_4-浏览器渲染ui" class="header-anchor">#</a> 4.浏览器渲染UI</h3> <div class="language- extra-class"><pre class="language-text"><code>1.浏览器获取HTML文件，然后对文件进行解析，形成DOM Tree
+
+2.与此同时，进行CSS解析，生成Style Rules
+
+3.接着将DOM Tree与Style Rules合成为 Render Tree
+
+4.接着进入布局（Layout）阶段，也就是为每个节点分配一个应出现在屏幕上的确切坐标
+
+5.随后调用GPU进行绘制（Paint），遍历Render Tree的节点，并将元素呈现出来
+
+</code></pre></div><h3 id="_5-cookie和localsrorage、session、indexdb-的区别"><a href="#_5-cookie和localsrorage、session、indexdb-的区别" class="header-anchor">#</a> 5.cookie和localSrorage、session、indexDB 的区别</h3> <table><thead><tr><th style="text-align:center;">特性</th> <th style="text-align:center;">cookie</th> <th>session</th> <th style="text-align:center;">localStorage</th> <th style="text-align:center;">sessionStorage</th></tr></thead> <tbody><tr><td style="text-align:center;">数据生命周期</td> <td style="text-align:center;">一般由服务器生成，可以设置过期时间，或者关闭窗口就消失</td> <td>关闭生命周期就到期</td> <td style="text-align:center;">除非被清理，否则一直存在</td> <td style="text-align:center;">页面关闭就清理</td></tr> <tr><td style="text-align:center;">数据存储大小</td> <td style="text-align:center;">4K</td> <td>4k</td> <td style="text-align:center;">5M</td> <td style="text-align:center;">5M</td></tr> <tr><td style="text-align:center;">与服务端通信</td> <td style="text-align:center;">存放于浏览器，请求的时候会携带</td> <td>存放于服务器</td> <td style="text-align:center;">不参与</td> <td style="text-align:center;">不参与</td></tr> <tr><td style="text-align:center;">安全性</td> <td style="text-align:center;">不安全</td> <td>安全</td> <td style="text-align:center;"></td> <td style="text-align:center;"></td></tr> <tr><td style="text-align:center;">形式</td> <td style="text-align:center;">字符串</td> <td>对象</td> <td style="text-align:center;"></td> <td style="text-align:center;"></td></tr> <tr><td style="text-align:center;">应用</td> <td style="text-align:center;">登录、购物车</td> <td>登录、购物车</td> <td style="text-align:center;"></td> <td style="text-align:center;"></td></tr> <tr><td style="text-align:center;">跨域</td> <td style="text-align:center;">支持跨域</td> <td>不支持跨域</td> <td style="text-align:center;"></td> <td style="text-align:center;"></td></tr></tbody></table> <h3 id="_6-chrome优点"><a href="#_6-chrome优点" class="header-anchor">#</a> 6.Chrome优点</h3> <div class="language- extra-class"><pre class="language-text"><code>1.具有预解析操作：
+	之前如果文件中出现js、css外部文件时，需要下载，就会耗费时间，从而导致DOM阻塞。
+	现在会启动预解析线程，分析HTML文件有无外部引入文件，从而提前下载
+</code></pre></div><h3 id="_7-阻塞渲染问题"><a href="#_7-阻塞渲染问题" class="header-anchor">#</a> 7.阻塞渲染问题</h3> <div class="language- extra-class"><pre class="language-text"><code>1.css解析成CSSOM，html解析生成DOM，生成渲染树。
+2.JavaScript阻塞DOM生成：
+	1.因为JavaScript要操作DOM
+	2.可以使用defer(contentLoaded事件前)和async(加载完立马执行)去优化，使js文件异步加载
+3.css阻塞js执行，但是不阻塞js加载：
+	1.因为js要操作css，需要依赖样式表
+	2.所以css也有可能会阻塞dom生成
+	3.前提是样式表放在前面，在后面的话，css解析就不会并行了
+</code></pre></div><h3 id="_8-如何生成dom"><a href="#_8-如何生成dom" class="header-anchor">#</a> 8.如何生成DOM</h3> <div class="language- extra-class"><pre class="language-text"><code>1.渲染引擎内部，有HTML解析器。解析过程是一边加载一遍解析的。
+2.content-type判断文件类型，创建一个渲染进程，网络进程和渲染进程会有一盒共享数据的管道。
+3.网络进程输送数据，渲染进程中的HTML解析器读取数据
+4.解析过程三个阶段：
+	1.通过分词器将字节流转换为Token，分别是StartTag 文本Token EndTag 三个Token，放入栈中
+	2.Token解析成DOM节点，DOM节点添加到DOM树中。HTML解析器有一个Token栈结构,用于解析父子关系，前面生成的Token压到这个栈中。
+	3.压到栈中的是StartTag，解析器为该Token创建一个DOM节点，父节点就是栈中左边的元素。
+	4.遇到的是 文本Token，生成文本节点，将该节点直接添加到DOM树种，无需压栈，父节点就是栈顶元素
+	5.分词器解析出来的是EndTag，就和栈顶元素对比，比如 startTag div 和 EndTag div 匹配成功，则该div元素解析完成
+这样，分词器不断压栈出栈，整个解析过程一直这样解析下去，直到分词器将所有字节流分词器完成。
+	
+</code></pre></div><h3 id="_9-减少白屏时间"><a href="#_9-减少白屏时间" class="header-anchor">#</a> 9.减少白屏时间</h3> <div class="language- extra-class"><pre class="language-text"><code>白屏原因：
+1.页面是需要布局树渲染的，那么JS，和CSS都会阻塞dom解析，所以会影响布局树的生成。
+
+解决办法：
+	1.通过内联 JavaScript、内联 CSS 来移除这两种类型的文件下载，这样获取到 HTML 文件 之后就可以直接开始渲染流程了。
+  2.但并不是所有的场合都适合内联，那么还可以尽量减少文件大小，比如通过 webpack 等 工具移除一些不必要的注释，并压缩 JavaScript 文件。
+  3.还可以将一些不需要在解析 HTML 阶段使用的 JavaScript 标记上 async 或者 defer。
+  4.对于大的 CSS 文件，可以通过媒体查询属性，将其拆分为多个不同用途的 CSS 文件，这 样只有在特定的场景下才会加载特定的 CSS 文件。
+</code></pre></div><h3 id="_10-浏览器安全xss-csrf"><a href="#_10-浏览器安全xss-csrf" class="header-anchor">#</a> 10.浏览器安全XSS，CSRF</h3> <div class="language- extra-class"><pre class="language-text"><code>一、XSS：跨站脚本攻击
+	1.概念：黑客往HTML文件orDOM文件注入恶意脚本，从而在用户浏览页面时对用户进行攻击。一开始是跨域进行攻击，但是现在通过往HTML文件中注入恶意代码的方式很多，所以跨域注入脚本已经不是唯一手段。因无法识别恶意脚本还是自己的脚本，所以恶意脚本有普通脚本相同权限。
+	2.攻击什么：
+		1.窃取Cookie数据：
+			恶意JS通过document.cooike获取cookie信息，可以模拟登录，进行转账；
+		2.监听用户行为：
+			JS可以通过addEventlistener监听键盘事件，输入账号密码等操作完全被监听。
+	3.怎么攻击：
+		1.存储型XSS攻击：恶意脚本存储在有漏洞的服务器，用户访问，脚本获取信息，发送给黑客的服务器；
+		2.反射型：用户在请求的时候，就把恶意脚本嵌入在请求链接提交给服务器，服务器又将恶意代码反射给浏览器。这就是XSS攻击。
+			例子：通过QQ群，邮箱里面引诱用户点击的恶意链接。
+		3.基于DOM的XSS攻击：不涉及服务器，黑客将恶意脚本注入页面，如WiFi网络，本地恶意软件劫持正在传输的HTML并且修改内容。
+	4.怎么防御：
+		反射型和存储型都需要经过服务器，属于服务器漏洞；而基于DOM的XSS攻击是在浏览器端完成，属于前端安全漏洞；
+		1.服务器漏洞：
+			1.在服务端进行过滤或者转码，将script过滤，或者&amp;lt;script&amp;gt;所以等传给浏览器的时候就不会执行恶意代码；
+			2.利用SCP：虽然转码有效果，但安全问题不能完全依赖服务端。SCP功能：
+				1.是禁止下载其他域的资源文件
+				2.禁止向第三方提交数据，所以用户数据不会外泄
+				3.禁止执行内联脚本
+				3.有上报功能，发现了XSS，及时修复；
+			3.使用HTTPOnly：一般情况，XSS攻击是盗用cookie的，使用这个属性可以保护Cookie的安全；
+				1.这样做的目的是让Cookie只在HTTP请求中使用，无法通过JavaScript来读取这段Cookie。
+				2.document.cookie就无法读取到Cookie了
+
+二、SCRF——跨站请求伪造
+	1.概念：黑客引诱用户打开网站，利用用户的登录状态发起跨站请求，也就是做一些坏事；
+	2.攻击什么：利用用户登录状态做坏事
+	3.攻击方式：
+		1.自动发起Get请求：最容易的方式，通过可以跨域的标签，如&lt;img src=“转账接口” /&gt;，到时候就会自动发起请求，完成转账；
+		2.自动发起POST请求：有些接口是POST方法的，写一个隐藏form表单，到时候利用登录状态，直接执行submit，完成转账；
+		3.引诱点击链接：比如点击下载什么美女图片啊，点了之后实际上就调用了转账接口，完成转账；
+	4.如何防御：
+		1.利用Cookie的SameSite属性： 因为Cookie具有维护浏览器和服务器的登录状态数据。
+			1.该属性可以禁止第三方的Cookie发送；
+			2.在HTTP响应头中，通过set-cookie字段设置cookie，可以带上SameSite选项；
+			3.SameSite有三个值：
+				1.Strict：完全禁止第三方
+				2.Lax:相对宽松，第三方链接打开，第三方站点提交Cookie能携带Cookie，但是第三方Post，img，iframe都不会携带；
+				3.None：完全不会禁止，任何情况都可以携带Cookie
+		2.服务端验证请求的来源站点：判断是否第三方
+			1.HTTP请求头中有Referer和Origin属性
+			2.Referer记录HTTP请求的来源地址，但是有些时候暴露URL给服务器并不合适，所以选择不上传Referer；
+			3.Origin属性：在XHR，Fecth发起请求，都会带上Origin（不含有路径信息）属性；
+		3.CSEF Token
+			除了上面两种，还可采用Token验证
+			1.首先，在浏览器向服务器发起请求时，服务器生成一个CSRF Token（服务器生成的字符串），然后将字符串植入页面并返回；
+			2.第二步，进行权限操作的时候就带上这个Token，然后验证Token是否合法；
+			3.如何使第三方，那肯定是没有Token的，因为Token在页面中，必须要打开页面；
+</code></pre></div><h3 id="_11-cookie有哪些值"><a href="#_11-cookie有哪些值" class="header-anchor">#</a> 11.cookie有哪些值</h3> <div class="language- extra-class"><pre class="language-text"><code>1.value：保存的值，字符串形式
+2.domain：哪些域名可以使用
+3.path：域名下哪些路径可以使用，一般都是/
+4.expires/max-Age：到期时间
+5.size：大小
+6.httpOnly：让该cookie只允许在HTTP请求中携带，不能通过第三方
+7.sameSite：通过严格，宽松，none模式限制cookie的携带。
+</code></pre></div><h3 id="_12-图片懒加载和预加载"><a href="#_12-图片懒加载和预加载" class="header-anchor">#</a> 12.图片懒加载和预加载</h3> <div class="language- extra-class"><pre class="language-text"><code>懒加载：延迟加载
+	目的：优化服务端，减少请求次数。
+	1.指的是在一个长网页中，用户达到该显示区域再去服务器请求数据加载。
+	2.这样做的好处，提升网站首屏加载速度，提升用户体验，减少服务器压力。
+	3.购物商场的商品图片，将图片真实路径保存起来，监听滚动事件，等到触发时，将路径赋值给图片的src属性。
+	
+预加载：提前加载。
+	1.提前将所需要资源请求到本地，这样后面在需要用到时就直接从缓存中获取资源
+	2.预加载减少用户等待时间，提升用户体验。
+	3.方式：
+		js中的image对象，为image对象设置src属性，实现预加载
+	
+</code></pre></div><h3 id="_13-如果页面上图片很多-怎么优化"><a href="#_13-如果页面上图片很多-怎么优化" class="header-anchor">#</a> 13.如果页面上图片很多，怎么优化</h3> <div class="language- extra-class"><pre class="language-text"><code>
+</code></pre></div><h3 id="_14-多个页面之间通信"><a href="#_14-多个页面之间通信" class="header-anchor">#</a> 14.多个页面之间通信</h3> <div class="language- extra-class"><pre class="language-text"><code>1.通过URL传递：
+	&quot;http://localhost:3000/b.html?data=&quot; + data
+	可能会导致url过长
+2.localStorage
+	本地存储，同源策略，整个源的页面也可以访问到
+3.postMessage向指定窗口发送信息，监听窗口上的message信息；
+</code></pre></div><h3 id="_15-spa应用的优缺点"><a href="#_15-spa应用的优缺点" class="header-anchor">#</a> 15.spa应用的优缺点</h3> <div class="language- extra-class"><pre class="language-text"><code>优点：
+	1.用户体验好，快，内容改变不需要重新加载整个页面，避免不必要的渲染；
+	2.对服务器压力小
+	
+缺点：
+	1.不利于SEO优化
+	2.第一次加载时需要加载所有内容，会更耗时间
+
+</code></pre></div><h2 id="五、操作系统"><a href="#五、操作系统" class="header-anchor">#</a> 五、操作系统</h2> <h3 id="_1-进程与线程"><a href="#_1-进程与线程" class="header-anchor">#</a> 1.进程与线程</h3> <div class="language- extra-class"><pre class="language-text"><code>进程是资源分配的基本单位，一个进程就是一个程序，
+线程是程序执行最小单位
+
+区别：
+	1.多进程是资源分配的最小单位，	线程是程序执行的最小单位
+	2.进程有自己独立的地址空间，		 线程是共享进程的数据的，使用相同的地址空间
+	3.进程开销大						线程开销小
+
+1.进程通信：
+	1.匿名管道
+	2.具名管道
+	3.消息队列
+	4.共享内存
+</code></pre></div><h3 id="_2-协程"><a href="#_2-协程" class="header-anchor">#</a> 2.协程</h3> <div class="language- extra-class"><pre class="language-text"><code>协程是一种比线程更加轻量级的存在。
+可以把协程看成是跑在线程上任务，一个线程上可以存在多个协程，但是只能同时执行一个协程。
+注意：协程不被操作系统内核管理，完全由程序控制。这样的好处是提高性能，不会像切换线程样消耗资源。
+例子：当前执行A协程，要启动B协程，那么A协程需要将主线程的控制权交给B协程。则A是B的父协程。
+作用：将函数暂定执行/恢复执行
+</code></pre></div><h2 id="四、git"><a href="#四、git" class="header-anchor">#</a> 四、GIT</h2> <h3 id="_1-git-撤销-回滚"><a href="#_1-git-撤销-回滚" class="header-anchor">#</a> 1.git 撤销/回滚</h3> <div class="language- extra-class"><pre class="language-text"><code>1.撤销：在本地进行的相关操作，但是并没有提交到远程仓库；
+	1.修改，但是未进行add
+		1.git checkout fileName 
+	2.多个地方进行add，但是只想提交一部分
+		1.$git reset HEAD &lt;filename&gt;
+	3.已经commit但是未提交
+		$ git commit --amend -m&quot;说明&quot;
+
+2.回滚：已经提交到远程仓库
+	1.删除最后一次提交
+		1.先git revert HEAD 再git push origin master
+		2.先git reset --hard HEAD^再git push origin master -f、
+		两者区别：revert是放弃某次提交，生成新提交，有记录
+				 reset是将HEAD指针指向未提交，没有记录
+</code></pre></div><h4 id="git-pull-和-git-fetch-的区别"><a href="#git-pull-和-git-fetch-的区别" class="header-anchor">#</a> . git pull 和 git fetch 的区别</h4> <div class="language- extra-class"><pre class="language-text"><code>git fetch 只是将远程仓库的变化下载下来，并没有和本地分支合并。
+
+git pull 会将远程仓库的变化下载下来，并和当前分支合并。
+</code></pre></div><h4 id="_3-git-rebase-和-git-merge-的区别"><a href="#_3-git-rebase-和-git-merge-的区别" class="header-anchor">#</a> 3. git rebase 和 git merge 的区别</h4> <div class="language- extra-class"><pre class="language-text"><code>git merge 和 git rebase 都是用于分支合并，关键在 commit 记录的处理上不同。
+
+git merge 会新建一个新的 commit 对象，然后两个分支以前的 commit 记录都指向这个新 commit 记录。这种方法会
+保留之前每个分支的 commit 历史。
+
+git rebase 会先找到两个分支的第一个共同的 commit 祖先记录，然后将提取当前分支这之后的所有 commit 记录，然后
+将这个 commit 记录添加到目标分支的最新提交后面。经过这个合并后，两个分支合并后的 commit 记录就变为了线性的记
+录了。
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新于:</span> <span class="time">3/4/2022, 3:53:11 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.922e2828.js" defer></script><script src="/assets/js/2.d7ac843b.js" defer></script><script src="/assets/js/87.bf848bae.js" defer></script>
+  </body>
+</html>

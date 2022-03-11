@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1 Promise async await 介绍一下 | coderqmj的博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/avatar.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.64f7ac41.css" as="style"><link rel="preload" href="/assets/js/app.922e2828.js" as="script"><link rel="preload" href="/assets/js/2.d7ac843b.js" as="script"><link rel="preload" href="/assets/js/88.a52426df.js" as="script"><link rel="prefetch" href="/assets/js/10.7b3d9b0c.js"><link rel="prefetch" href="/assets/js/100.486e622c.js"><link rel="prefetch" href="/assets/js/101.d6e1dc74.js"><link rel="prefetch" href="/assets/js/102.7dd0bb36.js"><link rel="prefetch" href="/assets/js/103.c70d0e4e.js"><link rel="prefetch" href="/assets/js/104.6cea9b68.js"><link rel="prefetch" href="/assets/js/105.88d5190c.js"><link rel="prefetch" href="/assets/js/106.0873e8a7.js"><link rel="prefetch" href="/assets/js/107.aca94093.js"><link rel="prefetch" href="/assets/js/108.bca217a4.js"><link rel="prefetch" href="/assets/js/109.5f4a8562.js"><link rel="prefetch" href="/assets/js/11.3db82a7b.js"><link rel="prefetch" href="/assets/js/110.4f43d13c.js"><link rel="prefetch" href="/assets/js/111.12faead2.js"><link rel="prefetch" href="/assets/js/112.6a100fc4.js"><link rel="prefetch" href="/assets/js/113.b635ecb3.js"><link rel="prefetch" href="/assets/js/114.2fc49843.js"><link rel="prefetch" href="/assets/js/115.9bbd97fe.js"><link rel="prefetch" href="/assets/js/116.0111b15f.js"><link rel="prefetch" href="/assets/js/117.2a08ade6.js"><link rel="prefetch" href="/assets/js/118.d5f21bef.js"><link rel="prefetch" href="/assets/js/119.a4028cab.js"><link rel="prefetch" href="/assets/js/12.0d96d9ee.js"><link rel="prefetch" href="/assets/js/120.24ca1007.js"><link rel="prefetch" href="/assets/js/121.cd8ad292.js"><link rel="prefetch" href="/assets/js/122.9e44a8bf.js"><link rel="prefetch" href="/assets/js/123.75a2e13c.js"><link rel="prefetch" href="/assets/js/124.fba7ba6c.js"><link rel="prefetch" href="/assets/js/125.751f3e3f.js"><link rel="prefetch" href="/assets/js/126.6546e225.js"><link rel="prefetch" href="/assets/js/127.e6ffe9f0.js"><link rel="prefetch" href="/assets/js/128.5ba61cba.js"><link rel="prefetch" href="/assets/js/129.5cf13129.js"><link rel="prefetch" href="/assets/js/13.f663b287.js"><link rel="prefetch" href="/assets/js/130.8cf31a88.js"><link rel="prefetch" href="/assets/js/131.a8879ecb.js"><link rel="prefetch" href="/assets/js/132.309606b3.js"><link rel="prefetch" href="/assets/js/133.4ca29821.js"><link rel="prefetch" href="/assets/js/134.5952e738.js"><link rel="prefetch" href="/assets/js/14.f62f380d.js"><link rel="prefetch" href="/assets/js/15.d8470657.js"><link rel="prefetch" href="/assets/js/16.642b34d5.js"><link rel="prefetch" href="/assets/js/17.449c4fca.js"><link rel="prefetch" href="/assets/js/18.979e104a.js"><link rel="prefetch" href="/assets/js/19.58c49ce8.js"><link rel="prefetch" href="/assets/js/20.26fae8f2.js"><link rel="prefetch" href="/assets/js/21.39a99ff9.js"><link rel="prefetch" href="/assets/js/22.f59b98cf.js"><link rel="prefetch" href="/assets/js/23.a92e121d.js"><link rel="prefetch" href="/assets/js/24.6b0ab34d.js"><link rel="prefetch" href="/assets/js/25.59b56b46.js"><link rel="prefetch" href="/assets/js/26.0aa4999f.js"><link rel="prefetch" href="/assets/js/27.e99a8129.js"><link rel="prefetch" href="/assets/js/28.c7dd852e.js"><link rel="prefetch" href="/assets/js/29.999d3392.js"><link rel="prefetch" href="/assets/js/3.1f6a410f.js"><link rel="prefetch" href="/assets/js/30.2efdf158.js"><link rel="prefetch" href="/assets/js/31.82f0b64f.js"><link rel="prefetch" href="/assets/js/32.68df0343.js"><link rel="prefetch" href="/assets/js/33.3a7ea0a7.js"><link rel="prefetch" href="/assets/js/34.687b3b61.js"><link rel="prefetch" href="/assets/js/35.39c120eb.js"><link rel="prefetch" href="/assets/js/36.4449a7d9.js"><link rel="prefetch" href="/assets/js/37.9532964a.js"><link rel="prefetch" href="/assets/js/38.144e8bb9.js"><link rel="prefetch" href="/assets/js/39.2abf6f30.js"><link rel="prefetch" href="/assets/js/4.bdb68f26.js"><link rel="prefetch" href="/assets/js/40.7fac4b90.js"><link rel="prefetch" href="/assets/js/41.9011a251.js"><link rel="prefetch" href="/assets/js/42.8e84c1e4.js"><link rel="prefetch" href="/assets/js/43.419e4228.js"><link rel="prefetch" href="/assets/js/44.79192e61.js"><link rel="prefetch" href="/assets/js/45.4e83ef2a.js"><link rel="prefetch" href="/assets/js/46.536b615b.js"><link rel="prefetch" href="/assets/js/47.81416819.js"><link rel="prefetch" href="/assets/js/48.f1a49526.js"><link rel="prefetch" href="/assets/js/49.901c2a97.js"><link rel="prefetch" href="/assets/js/5.610e1eb4.js"><link rel="prefetch" href="/assets/js/50.148207f2.js"><link rel="prefetch" href="/assets/js/51.317f41c5.js"><link rel="prefetch" href="/assets/js/52.a6cfe0c4.js"><link rel="prefetch" href="/assets/js/53.31c15faa.js"><link rel="prefetch" href="/assets/js/54.86e49cfb.js"><link rel="prefetch" href="/assets/js/55.7e2c8fc0.js"><link rel="prefetch" href="/assets/js/56.699dc67d.js"><link rel="prefetch" href="/assets/js/57.33564c0f.js"><link rel="prefetch" href="/assets/js/58.87b42eb5.js"><link rel="prefetch" href="/assets/js/59.507ceb32.js"><link rel="prefetch" href="/assets/js/6.ec9aaafc.js"><link rel="prefetch" href="/assets/js/60.5a66cc53.js"><link rel="prefetch" href="/assets/js/61.92b1805f.js"><link rel="prefetch" href="/assets/js/62.caf5e68e.js"><link rel="prefetch" href="/assets/js/63.7817522c.js"><link rel="prefetch" href="/assets/js/64.e857c815.js"><link rel="prefetch" href="/assets/js/65.54c955d6.js"><link rel="prefetch" href="/assets/js/66.4dbd3059.js"><link rel="prefetch" href="/assets/js/67.9b678f79.js"><link rel="prefetch" href="/assets/js/68.081769bd.js"><link rel="prefetch" href="/assets/js/69.68a243e0.js"><link rel="prefetch" href="/assets/js/7.7d5d2905.js"><link rel="prefetch" href="/assets/js/70.3cf2db12.js"><link rel="prefetch" href="/assets/js/71.ae28c841.js"><link rel="prefetch" href="/assets/js/72.91f99661.js"><link rel="prefetch" href="/assets/js/73.31290ec1.js"><link rel="prefetch" href="/assets/js/74.3b64e893.js"><link rel="prefetch" href="/assets/js/75.816b9303.js"><link rel="prefetch" href="/assets/js/76.decf1ed4.js"><link rel="prefetch" href="/assets/js/77.d27ebbbb.js"><link rel="prefetch" href="/assets/js/78.2222d4be.js"><link rel="prefetch" href="/assets/js/79.256139d8.js"><link rel="prefetch" href="/assets/js/8.42123a36.js"><link rel="prefetch" href="/assets/js/80.16680d3c.js"><link rel="prefetch" href="/assets/js/81.2f786598.js"><link rel="prefetch" href="/assets/js/82.911631e1.js"><link rel="prefetch" href="/assets/js/83.4cb96d07.js"><link rel="prefetch" href="/assets/js/84.06e4f668.js"><link rel="prefetch" href="/assets/js/85.e77e6e1e.js"><link rel="prefetch" href="/assets/js/86.d2ef0414.js"><link rel="prefetch" href="/assets/js/87.bf848bae.js"><link rel="prefetch" href="/assets/js/89.b57aa852.js"><link rel="prefetch" href="/assets/js/9.b646ca99.js"><link rel="prefetch" href="/assets/js/90.f3adce23.js"><link rel="prefetch" href="/assets/js/91.aef49fa5.js"><link rel="prefetch" href="/assets/js/92.b5faa774.js"><link rel="prefetch" href="/assets/js/93.1106a757.js"><link rel="prefetch" href="/assets/js/94.8e0db68a.js"><link rel="prefetch" href="/assets/js/95.18fe0149.js"><link rel="prefetch" href="/assets/js/96.9256b873.js"><link rel="prefetch" href="/assets/js/97.94de60a0.js"><link rel="prefetch" href="/assets/js/98.f196f022.js"><link rel="prefetch" href="/assets/js/99.00436cae.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.64f7ac41.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/avatar.png" alt="coderqmj的博客" class="logo"> <span class="site-name can-hide">coderqmj的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  文章
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  琐碎
+</a></li></ul></div></div><div class="nav-item"><a href="https://leetcode-cn.com/u/2vgrNDufDX/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/coderqmj" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  文章
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  琐碎
+</a></li></ul></div></div><div class="nav-item"><a href="https://leetcode-cn.com/u/2vgrNDufDX/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/coderqmj" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>计算机网络</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/ComputerNet/HTTP.html" class="sidebar-link">1.HTTP相关</a></li><li><a href="/pages/ComputerNet/七层模型.html" class="sidebar-link">2.七/四/五层模型</a></li><li><a href="/pages/ComputerNet/浏览器缓存.html" class="sidebar-link">浏览器缓存</a></li><li><a href="/pages/ComputerNet/HTTPS.html" class="sidebar-link">HTTPS</a></li><li><a href="/pages/ComputerNet/浏览器安全.html" class="sidebar-link">浏览器安全</a></li><li><a href="/pages/ComputerNet/浏览器性能优化.html" class="sidebar-link">浏览器性能优化</a></li><li><a href="/pages/ComputerNet/HTTP历史.html" class="sidebar-link">HTTP历史</a></li><li><a href="/pages/ComputerNet/HTTP请求流程.html" class="sidebar-link">HTTP请求流程</a></li><li><a href="/pages/ComputerNet/JavaScript如何影响DOM树构建.html" class="sidebar-link">JavaScript如何影响DOM树构建</a></li><li><a href="/pages/ComputerNet/CSS如何影响首次白屏.html" class="sidebar-link">CSS如何影响首次白屏</a></li><li><a href="/pages/ComputerNet/分层合成：为什么CSS比JS高效.html" class="sidebar-link">分层合成：为什么CSS比JS高效</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>NODE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>构建工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构与算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>GIT教程</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>TypeScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>正则表达式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>项目</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>三方库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>实习遇到的问题及成长</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>腾讯工作的思考与总结</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>琐碎</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="_1-promise-async-await-介绍一下"><a href="#_1-promise-async-await-介绍一下" class="header-anchor">#</a> 1 Promise async await 介绍一下</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>Promise他是解决异步编程的一种方案；
+主要有两个特点：
+	<span class="token number">1.</span>解决了回调地狱
+    <span class="token number">2.</span>可以链式调用
+    
+它本身具有race，all，resolve，reject等方法，原型上有then，catch等方法，
+其中promise接收一个函数，并且这个函数又有两个参数，分别是执行成功的回调resolve，失败的回调reject。
+其中<span class="token punctuation">.</span>then第一个参数是执行成功的回调，第二个参数是执行失败的回调，<span class="token punctuation">.</span>catch相当于<span class="token punctuation">.</span>then的第二个回调，他可以指定reject的回调
+</code></pre></div><h3 id="_2判断数组-string-数字"><a href="#_2判断数组-string-数字" class="header-anchor">#</a> 2判断数组/String/数字</h3> <div class="language- extra-class"><pre class="language-text"><code>数组：Array.isArray / arr.constructor===Array / instanceof
+字符串：typeof	/ str.constructor===String
+数字：isNaN	/ typeof / constructor
+</code></pre></div><h3 id="_3typeof返回值"><a href="#_3typeof返回值" class="header-anchor">#</a> 3typeof返回值</h3> <div class="language- extra-class"><pre class="language-text"><code>除了null(返回的是object)的基本类型+function+object
+</code></pre></div><h3 id="_4map和foreach的区别"><a href="#_4map和foreach的区别" class="header-anchor">#</a> 4map和foreach的区别</h3> <div class="language- extra-class"><pre class="language-text"><code>两者功能差不多的
+forEach不会返回结果，直接修改原来的数组
+map返回全新的数组
+</code></pre></div><h3 id="_5-es6特性"><a href="#_5-es6特性" class="header-anchor">#</a> 5.es6特性</h3> <div class="language- extra-class"><pre class="language-text"><code>let/const /字符串模板/ 箭头函数/ 函数参数默认值/ 展开运算符/解构
+set，map，promise
+</code></pre></div><h3 id="_6-es6的类中-静态属性和构造函数谁先加载-为什么"><a href="#_6-es6的类中-静态属性和构造函数谁先加载-为什么" class="header-anchor">#</a> 6. es6的类中 静态属性和构造函数谁先加载 为什么 ？</h3> <div class="language- extra-class"><pre class="language-text"><code>
+</code></pre></div><h3 id="_7-怎么在外部调用静态属性"><a href="#_7-怎么在外部调用静态属性" class="header-anchor">#</a> 7.怎么在外部调用静态属性？</h3> <div class="language- extra-class"><pre class="language-text"><code>
+</code></pre></div><h3 id="_8-事件循环"><a href="#_8-事件循环" class="header-anchor">#</a> 8.事件循环</h3> <div class="language- extra-class"><pre class="language-text"><code>宏任务：
+	script整体代码
+    setTimeout
+    setInterval
+    I/O
+    UI render
+微任务：
+	process.nextTick
+	
+	Async/Await
+事件循环：
+	1.先执行整体代码，这属于宏任务；
+	2.中途遇到宏任务，加入宏任务队列，遇到微任务加入微任务队列
+	3.整体代码执行到底的时候，再读取本轮的微任务全部执行完，在读取宏任务进行下一轮执行
+	
+JS是单线程的，一个时间点做一个事情，为了防止执行阻塞，有了同步任务异步任务，
+</code></pre></div><h3 id="_9-es6模块和commonjs的区别"><a href="#_9-es6模块和commonjs的区别" class="header-anchor">#</a> 9.ES6模块和CommonJS的区别</h3> <div class="language- extra-class"><pre class="language-text"><code>1.
+commonJS模块输出的是一个值的拷贝，输出后，模块内部变化影响不到这个值
+ES6输出的是值的引用
+
+2.CommonJS是运行时加载，ES6模块式编译时输出接口
+</code></pre></div><h3 id="_10-怎么在事件捕获阶段触发事件"><a href="#_10-怎么在事件捕获阶段触发事件" class="header-anchor">#</a> 10. 怎么在事件捕获阶段触发事件 ?</h3> <div class="language- extra-class"><pre class="language-text"><code>addEventListener('click',function,iscapture)
+第三个参数
+</code></pre></div><h3 id="_11-xss发生场景"><a href="#_11-xss发生场景" class="header-anchor">#</a> 11.xss发生场景</h3> <div class="language- extra-class"><pre class="language-text"><code>全称：Cross-site scripting，代码注入
+XSS 攻击就是黑客往页面中注入恶意脚本，然后将页面的一些重要数据上传到恶意服务器。常见的三种 XSS 攻击模式是存储型 XSS 攻击、反射型 XSS 攻击和基于 DOM 的 XSS 攻击。
+</code></pre></div><h3 id="_12-实现apply-call-bind"><a href="#_12-实现apply-call-bind" class="header-anchor">#</a> 12.实现apply/call/bind</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//1.apply</span>
+Function<span class="token punctuation">.</span>prot
+</code></pre></div><h3 id="_13-原型和原型链说一下"><a href="#_13-原型和原型链说一下" class="header-anchor">#</a> 13.原型和原型链说一下</h3> <div class="language- extra-class"><pre class="language-text"><code>原型： 在JavaScript高级程序设计中给出的解释是· 每一个构造函数（对应的就是类函数）都有一个prototype属性（强调下是属性），这个prototype属性会指向一个原型对象（强调下是对象）。该原型属性指向的原型对象称之为原型
+	例子：比如说，一个function Foo(),他有一个prototype属性这个属性指向Foo.prototype，然后Foo.prototype的constructor指向Foo；
+
+原型链： 每一个对象都有隐式原型，指向创建该对象的构造函数的原型。对象可以通过隐式原型查找不属于该对象的属性。
+	比如：function Foo() __proto__ 是Function.prototype 的 __proto__是Object.prototype;
+
+注意 function Function的显示原型和隐式原型都是指向Function.prototype
+</code></pre></div><h3 id="_14-说一下同源策略"><a href="#_14-说一下同源策略" class="header-anchor">#</a> 14.说一下同源策略</h3> <div class="language- extra-class"><pre class="language-text"><code>A: 什么是同源？
+S: 同源策略是一种安全协议，即协议，域名，端口都相同
+
+A: 为什么用同源策略？
+S：没有同源策略的话，利用iframe嵌套银行的网页，将账号密码提交到他人的表单中就不安全了
+
+
+</code></pre></div><h3 id="_15-new发生了什么"><a href="#_15-new发生了什么" class="header-anchor">#</a> 15.new发生了什么?</h3> <div class="language- extra-class"><pre class="language-text"><code>1.创建了一个新对象199
+2.将构造函数的作用域赋值给新对象(this指向这个新对象)/绑定this
+3.执行构造函数里面的代码(给这个新对象添加属性)/新的对象连接到原型
+4.返回新对象
+</code></pre></div><h3 id="_16-es5继承"><a href="#_16-es5继承" class="header-anchor">#</a> 16.ES5继承</h3> <div class="language- extra-class"><pre class="language-text"><code>1.构造函数
+2.原型继承
+3.组合继承
+	function Person(age){
+		this.age = age;
+	}
+	function Student(age,name){
+		Person.call(this,age)
+		this.name = name;
+	}
+	Student.prototype = new Person()
+	Programmer.prototype.constructor = Programmer // 修复构造函数指向
+	
+	let qmj = new Student(18,'qmj')
+4.寄生继承
+5.寄生组合继承...
+</code></pre></div><h3 id="_17-事件流-事件冒泡阻止方法"><a href="#_17-事件流-事件冒泡阻止方法" class="header-anchor">#</a> 17.事件流/事件冒泡阻止方法</h3> <div class="language- extra-class"><pre class="language-text"><code>阻止冒泡：
+	W3C：e.stopPropagation()
+	IE：e.cancelBubble = true
+	项目中：在做文案中心年度报告的时候，第一次进入就需要一个弹窗图片，点击图片进入年度报告，点击图片外部则display: none;这就需要阻止冒泡。
+取消默认事件：
+	w3c:e.preventDefault()
+	ie: e.returnValue = false
+</code></pre></div><h3 id="_18-事件代理"><a href="#_18-事件代理" class="header-anchor">#</a> 18.事件代理</h3> <ul><li>节省内存，避免操作大量的dom，给节点注册，注销事件</li> <li>注意e.target是单独的节点（1，2，3...），e.currentTarget是整个ul</li></ul> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ul<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">let</span> ul <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#ul'</span><span class="token punctuation">)</span>
+	ul<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>target<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="_19-为什么js是单线程的"><a href="#_19-为什么js是单线程的" class="header-anchor">#</a> 19.为什么js是单线程的</h3> <div class="language- extra-class"><pre class="language-text"><code>js设计出来是用于操作DOM的，一个事件只能做一件事情
+假如这里要删除dom，那里要给这个dom添加东西，那就不
+知道以谁为准了
+</code></pre></div><h3 id="_20-undefined-null-为什么是true"><a href="#_20-undefined-null-为什么是true" class="header-anchor">#</a> 20.undefined == null 为什么是true？</h3> <div class="language- extra-class"><pre class="language-text"><code>这个规定，背下来就行
+</code></pre></div><h3 id="_21-手写ajax请求"><a href="#_21-手写ajax请求" class="header-anchor">#</a> 21.手写ajax请求</h3> <h3 id="_22-缓存的用法"><a href="#_22-缓存的用法" class="header-anchor">#</a> 22.缓存的用法</h3> <h3 id="_23-语义化标签在框架里能进行seo优化吗"><a href="#_23-语义化标签在框架里能进行seo优化吗" class="header-anchor">#</a> 23.语义化标签在框架里能进行SEO优化吗？</h3> <div class="language- extra-class"><pre class="language-text"><code>不能
+</code></pre></div><h3 id="_24-发布者-订阅者模式"><a href="#_24-发布者-订阅者模式" class="header-anchor">#</a> 24.发布者——订阅者模式</h3> <div class="language- extra-class"><pre class="language-text"><code>1.定义一个事件对象，里面有两个方法，去订阅(on)和去发布(emit)方法
+2.去订阅接受两个参数，事件关键字key，key对应的回调函数fn
+	判断是否有存储key对应的回调函数列表，无？创建并push，有，push回调函数
+3.去发布emit的作用是取出对应key的回调函数并且执行，把参数也带上
+	let key = [].shift.call(arguments)取出key
+	fns = this.list[key];取出key对应的回调函数
+	fns.forEach fn.apply(this, arguments);执行
+</code></pre></div><h3 id="_25-const-数组-对象内容可以被改变"><a href="#_25-const-数组-对象内容可以被改变" class="header-anchor">#</a> 25.const 数组/对象内容可以被改变</h3> <div class="language- extra-class"><pre class="language-text"><code>引用地址不改变，但内容改变
+
+对象使用 Object.freeze(obj)就可以不被改变
+</code></pre></div><h3 id="_26-axios的二次封装"><a href="#_26-axios的二次封装" class="header-anchor">#</a> 26.axios的二次封装</h3> <div class="language- extra-class"><pre class="language-text"><code>好处：可以不对请求库直接进行依赖，便于管理
+
+在config.js里面配置好baseURL，超时信息等，
+在request.js里面配置请求和响应(拿到出具就返回res)，
+有err就判断他返回的状态码，进行响应的提示，最后返回axios的实例
+
+然后就是在相应的请求文件里面配置拼接的api地址，暴露出相关api即可
+</code></pre></div><h3 id="_27-let-a-1和-a-1区别"><a href="#_27-let-a-1和-a-1区别" class="header-anchor">#</a> 27.let a = 1和 a = 1区别</h3> <div class="language- extra-class"><pre class="language-text"><code>let a = 1 是定义在自己的作用域里面的
+
+a = 1 都是定义在window上的
+</code></pre></div><h3 id="_28-数据类型"><a href="#_28-数据类型" class="header-anchor">#</a> 28.数据类型</h3> <div class="language- extra-class"><pre class="language-text"><code>介绍有哪些？
+undefined和null的区别？
+number和bigint的区别？
+判断数据类型的typeof和instanceof，Object.prototype.toString.call()
+
+值类型：null Number Undefined String Boolean Bigint Symbol
+引用类型： Object
+
+null和undefined区别：
+	1.typeof不一样，null是object，undefined是undefined
+	2.null转换成数字为0，undefined转换成数字是NAN
+	3.null是声明了，赋值为null；undefined是声明了，但没有赋值
+	
+number和bigint的区别：
+	1.范围不一样：number为 -（2^53-1) -- 2^53-1;bigint就没有这个限制
+	2.定义书写方式不一样，number直接写出来；bigint需要在后面加n；
+	2.number可以是浮点数，也可是整数；bigint只能是整数；
+	
+typeof/instanceof/Object.prototype.toString
+	1.typeof: 
+		null-&gt;object：在底层都是二进制，二进制前三位是0，就会被判断成object，null全是0；
+		string/function/object/number/undefined
+	2.instanceof：
+		用于准确判断对象的，因为用typeof判断的话，除了function其他全都是object。
+		判断的原理就是查看左边的隐式原型是否在右边的原型链上；
+	3.Object.prototype.toString.call
+		精准判断所有的数据类型，包括各种对象
+</code></pre></div><h3 id="_29-let-const-var"><a href="#_29-let-const-var" class="header-anchor">#</a> 29.let/const/var</h3> <div class="language- extra-class"><pre class="language-text"><code>let/const和var之间的区别？
+let和const的区别？
+
+let/const有块级作用域，一个花括号就是块级作用域
+let/const有暂时性死区 	var是变量提升
+
+const和let的区别：
+	1.声明一个常量，不会改变，但是引用类型可以改变，可以通过freeze使其达到不改变
+	2.const声明必须赋值
+	
+</code></pre></div><h3 id="_30-箭头函数区别"><a href="#_30-箭头函数区别" class="header-anchor">#</a> 30.箭头函数区别</h3> <div class="language- extra-class"><pre class="language-text"><code>箭头函数与普通函数区别？
+
+	1.箭头函数没有arguments，建议用剩余运算符
+	2.没有prototype，不能做构造函数
+	3.没有自己的this，在你定义函数时就确定了this
+	4.不能使用call，apply改变this
+	5.当只有一个参数一个返回值时，可以省略参数括号，大括号和return
+为什么不能绑定this？
+	MDN官网的话：更简短的函数并且不绑定this
+</code></pre></div><h3 id="_31-promise实现过程"><a href="#_31-promise实现过程" class="header-anchor">#</a> 31.promise实现过程</h3> <div class="language- extra-class"><pre class="language-text"><code>1.定义基本数据
+	定义promise状态：默认为 'pending'
+	定义成功返回值res 默认为空
+	定义失败原因reason 默认为空
+	定义存放成功回调函数的数组
+	定义存放失败回调函数的数组
+
+2.定义成功回调函数resolve
+	传进一个参数data，
+	如果状态为pending的话，把状态该为fullfiled
+	把上面定义数value设置为传进来的data
+	取出存放成功回调函数进行执行
+
+2.定义失败的回调函数
+	传进一个参数：失败的原因
+	状态为pending的话，把状态改为rejected
+	再把定义的reason设置为传进来的reason
+	再去执行失败的回调函数
+	
+3.定义.then方法
+	.then有两个回调，第一个成功，第二个失败
+	判断当前状态去执行成功还是失败
+	如果是pending状态，将成功或者失败回调事件存入对应的数组中
+	
+</code></pre></div><h3 id="_32-null和undefined的区别"><a href="#_32-null和undefined的区别" class="header-anchor">#</a> 32.null和undefined的区别</h3> <div class="language- extra-class"><pre class="language-text"><code>1.含义
+	null是尚未存在的对象
+	undefined代表的是声明了，但未赋值的原始值
+2.转数字
+	null转数字为0
+	undefined转数字为NaN
+3.typeof不一样
+	null是object
+	undefined是undefined
+</code></pre></div><h3 id="_33-axios二次封装"><a href="#_33-axios二次封装" class="header-anchor">#</a> 33.axios二次封装</h3> <div class="language- extra-class"><pre class="language-text"><code>为什么封装：
+	不进行封装，想要在那个组件发送请求，就在八个组件使用axios，这样很多组件就依赖它，如果axios不维护或者出现重大bug，这样需要在每一个组件修改，这样很麻烦。
+	单独在一个文件里面进行对配置，请求，响应错误信息等进细节行封装，再导出这个实例，在组件里面使用就没有后顾之忧了，因为只有封装文件依赖了axios，到时候只需要修改封装文件
+	
+怎么封装：
+	封装了一些基本配置信息，baseUrl，Timeout，
+	配置了请求拦截(用于发送网络请求时，显示loading组件，验证token)
+	配置响应拦截返回响应异常信息
+	导出这个实例在需要的地方使用
+</code></pre></div><h3 id="_34-数据双向绑定原理"><a href="#_34-数据双向绑定原理" class="header-anchor">#</a> 34.数据双向绑定原理</h3> <div class="language- extra-class"><pre class="language-text"><code>通过发布订阅者模式结合Object.defineProperty去监听每个属性的改变和访问。主要需要实现4个功能：
+	观察者Observer/订阅器Dep/订阅者Watcher/解析器Compile
+
+观察者Obserr：
+	写一个函数里面用set和get监听属性的被谁依赖与改变。然后遍历(Object.keys(obj))对象的每一个属性，让每一个属性被监听.
+
+订阅器Dep：
+	订阅器收集订阅者，数据变化的时候调用订阅者更新函数；
+	两个函数，观察者的get函数里面监听那里被依赖了，就把订阅者添加到订阅者数组里面，观察者的set监听到数据被改变了，就调用订阅者一个一个取出来调用更新函数；
+	
+订阅者Watcher：
+	订阅者是要做一些具体的事情的，加到订阅器数组和执行数据更新操作；
+	因为在订阅器里面执行的是把相应的订阅者一个个取出来调用订阅者的更新函数，所以在订阅者里面主要实现的是update具体的细节，
+	update：里面通过this.vm.data[this.exp]获取到最新的数据，进行更新；
+
+解析器Compile：
+	通过上面三个其实就已经实现了数据双向绑定，但是没有进行解析dom节点，
+</code></pre></div><h3 id="_35-commonjs-amd-cmd-es6module"><a href="#_35-commonjs-amd-cmd-es6module" class="header-anchor">#</a> 35.CommonJS/AMD/CMD/ES6Module</h3> <div class="language- extra-class"><pre class="language-text"><code>commonjs:
+	是同步的，在服务端比较快，在浏览器端会慢；限于网络更合理的是使用异步加载模式;
+	通过module.exports导出和require导入
+AMD：
+	是异步加载的方式，模块加载不影响后面语句执行；依赖这个模块的语句都定义在一个回调函数上，加载完才会执行
+ES6Module:
+	通过export导出，通过import{}导入；如果是export default就是不需要大括号；
+	
+CommonJS和ES6 ES6的区别：
+	1.CommonJS输出的是一个值的拷贝，ES6输出的是值的引用；
+		前者就是输出后，模块内部变化就不会影响到这个值；
+		ES6是动态引用的，遇到import命令时才会去读取里面的值
+	2.CommonJS 模块是运行时加载，ES6 模块是编译时输出接口。
+		运行时加载：就是输入时先加载整个模块，生成一个对象，再从这里面读取方法
+		编译时加载：ES6模块不是对象，而是通过export输出指定的代码，import采用静态命令的形式。在import是可以指定加载某个输出值，而不是整个模块
+</code></pre></div><h3 id="_35-commonjs"><a href="#_35-commonjs" class="header-anchor">#</a> 35.CommonJs</h3> <div class="language- extra-class"><pre class="language-text"><code>commonjs:
+	1.里面通过module.exports/exports导出，通过require()导入。
+		require()是个函数，具有返回值，其返回值就是exports这个对象；
+	2.module.exports：
+		在commonjs规范里面是没有提到module.exports的。
+		是Node为了实现导出而实现的一个Module类，在源码里module.exports=exports，使这两个指向同一个对象
+		本质上就是module.exports在导出
+		但是如果你在模块里 module.exports = {}，module.exports就和exports断开联系了，最终导入的就是module.exports新对象
+	3.require(X)查找细节
+		情况一：X是核心模块，直接返回核心模块，停止查找
+		情况二：X是./ ../ /
+			第一步：X当做一个文件在对应目录下查找
+				1.有后缀名，按照后缀名进行查找对应文件
+				2.无后缀名，查找文件X=&gt;查找X.js=&gt;查找X.json=&gt;查找X.node
+			第二步：X是一个目录
+				1.查找X/index.js=&gt;index.json=&gt;index.node
+			第三步：没找到返回 Not Found
+		情况三：直接是X，但X不是核心模块
+			在当前目录查找node_modules，然后上一层目录node_modules，直到根目录
+	4.模块加载过程
+		1）commonJs加载时同步的，加载完才会进行下一步代码
+		2）不会进行多次加载，index.js加载a.js和b.js a.js加载b.js:
+			则b.js只会被执行一次，module对象中的loaded被设置为true
+		3）模块相互依赖，是一个图结构，引用顺序是按照图的深度优先遍历的，即使循环引用，形成闭环，最终每个模块只会执行一次。
+</code></pre></div><h3 id="_36-防抖节流的区别"><a href="#_36-防抖节流的区别" class="header-anchor">#</a> 36.防抖节流的区别</h3> <div class="language- extra-class"><pre class="language-text"><code>防抖：
+	原理：在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时
+	提交表单，搜索，窗口resize，等使用防抖
+
+节流：
+	使函数有节制的执行，而不是全部进行执行，一般都是在多少秒内执行一次。与防抖最主要的区别在于，这个时间点内，不断的执行这个函数，它也不会重新计时，而是等待给定的时间过去，再执行，才会被执行。
+	scroll事件，mousemove事件需要持续执行的
+</code></pre></div><h3 id="_37-ajax的readystate"><a href="#_37-ajax的readystate" class="header-anchor">#</a> 37.Ajax的readystate</h3> <div class="language- extra-class"><pre class="language-text"><code>0: 未初始化，尚未调用open
+1：启用，调用 .open但是为调用.send
+2：发送，已经调用send但是未接收到响应
+3：接收，已经接收到部分数据响应
+4：完成，已经接受到全部数据，而且可以在客户端使用
+</code></pre></div><h3 id="_38-和-区别"><a href="#_38-和-区别" class="header-anchor">#</a> 38. == 和 ===区别</h3> <table><thead><tr><th style="text-align:center;">==</th> <th style="text-align:center;">===</th></tr></thead> <tbody><tr><td style="text-align:center;">==是非严格等于</td> <td style="text-align:center;">=== 是严格等于</td></tr> <tr><td style="text-align:center;">==判断的时候会进行类型转换，然后判断两边值是否相等</td> <td style="text-align:center;">不会进行转换，直接比较值</td></tr> <tr><td style="text-align:center;">undefined==null是true</td> <td style="text-align:center;">undefined==null是false</td></tr></tbody></table> <p><img src="C:%5CUsers%5C%E9%82%B1%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1598452624096.png" alt="1598452624096"></p> <h3 id="_39-for-in-和-for-of-的区别"><a href="#_39-for-in-和-for-of-的区别" class="header-anchor">#</a> 39.for in 和 for of 的区别</h3> <table><thead><tr><th style="text-align:center;">for in</th> <th style="text-align:center;">for of</th></tr></thead> <tbody><tr><td style="text-align:center;">获取的是键名key或者下标</td> <td style="text-align:center;">获取的是键值value</td></tr> <tr><td style="text-align:center;">会遍历整个对象的原型链，性能差</td> <td style="text-align:center;">只遍历当前对象</td></tr> <tr><td style="text-align:center;">数组遍历：会返回所有可枚举属性，包括原型链</td> <td style="text-align:center;">只返回下标对应属性值</td></tr></tbody></table> <h3 id="_40-函数定义方法及区别"><a href="#_40-函数定义方法及区别" class="header-anchor">#</a> 40.函数定义方法及区别</h3> <div class="language- extra-class"><pre class="language-text"><code>1.声明式定义
+	function foo() {}
+
+2.函数表达式
+	var foo = function() {}
+
+3.箭头函数
+	var foo = () =&gt; {}
+
+4.对象里面的函数
+	foo: function() {}
+
+5.立即执行函数
+	(function() {clg(1)})()
+	
+区别：第一种会进行函数名提升，就是在定义之前调用会调用成功，这显然不符合规范。第二种则会报错，个人感觉第二种更符合规范一点。
+
+</code></pre></div><h3 id="_41-arguments转数组"><a href="#_41-arguments转数组" class="header-anchor">#</a> 41.arguments转数组</h3> <div class="language- extra-class"><pre class="language-text"><code>arguments是一个伪数组
+
+1.写个函数遍历arguments再push，再返回
+
+2.使用Array.prototype.slice.call(arguments)/[].slice.call()
+
+3.扩展运算符
+	var argsArray = [...arguments ];
+</code></pre></div><h3 id="_44-将数组转换为key-value"><a href="#_44-将数组转换为key-value" class="header-anchor">#</a> 44.将数组转换为key：value</h3> <div class="language- extra-class"><pre class="language-text"><code>1.扩展运算符...
+let obj = {...arr} index为key
+
+2.遍历数组元素，将其添加到新对象中
+function foo(arr) {
+  let result = {}
+  for(let i = 0;i&lt;arr.length;i++){
+    result[i] = arr[i]
+  }
+  return result;
+}
+</code></pre></div><h3 id="_42-跨域"><a href="#_42-跨域" class="header-anchor">#</a> 42.跨域</h3> <div class="language- extra-class"><pre class="language-text"><code>1.jasonp
+
+2.cors
+
+	2.判断简单请求还是复杂请求
+		简单请求必须满足两个条件：
+			1.请求方法必须是：GET，POST，PUT之一
+			2.content-type必须是：text/plain，multipart/form-data，application/x-www-form-					urlencoded之一
+</code></pre></div><h3 id="_43-arguments"><a href="#_43-arguments" class="header-anchor">#</a> 43.arguments</h3> <div class="language- extra-class"><pre class="language-text"><code>arguments相当于伪数组
+
+console.log(Object.prototype.toString.call(arguments)) // [object Arguments]
+typeof arguments // object
+</code></pre></div><h3 id="_44-执行上下文"><a href="#_44-执行上下文" class="header-anchor">#</a> 44.执行上下文</h3> <div class="language- extra-class"><pre class="language-text"><code>1.全局执行上下文
+	1.默认或者基础执行上下文。不在函数内部就是全局。
+	2.做两个事情：创建全局window对象（浏览器），this值等于这个对象
+	3.一个程序只有一个全局执行上下文
+
+2.函数执行上下文
+	1.每当一个函数被调用时，就会给这个函数创建一个函数执行上下文。 函数调用时创建。
+	2.每个函数都有自己的执行上下文，但需要被调用才会创建。
+	3.函数上下文可以有多个，新的执行上下文被创建，会按照定义顺序执行一系列步骤。
+	
+3.创建执行上下文
+	1.两个阶段：
+        1.创建阶段：在执行JavaScript前创建
+            1.确定this，即this绑定
+            	1.全局执行上下文绑定到全局对象中，浏览器中就是window
+            	2.在函数中，取决于函数是怎么被调用的。
+            		1.被引用对象调用，this就是那个对象。
+            		2.否则就是全局对象或者undefined（严格模式）
+            2.创建此法环境组件
+            3.创建变量环境组件
+        执行阶段；
+	
+	
+</code></pre></div><h3 id="_45-作用域-词法作用域-动态作用域"><a href="#_45-作用域-词法作用域-动态作用域" class="header-anchor">#</a> 45.作用域——词法作用域&amp;动态作用域</h3> <div class="language-js extra-class"><pre class="language-js"><code>作用域是什么：定义变量的区域
+作用：规定了如何查找变量，也就是确定当前代码对变量的访问权限。
+词法作用域（静态作用域）：函数作用域在定义的时候就确定了。
+动态作用域：函数的作用域再调用时确定。
+
+例子
+<span class="token comment">// js是静态作用域，函数作用域是在定义时决定的，而不是在调用时决定的</span>
+<span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'global'</span>
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'local'</span>
+  <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// global 定义的时候决定的</span>
+</code></pre></div><h3 id="_46-加载海量数据"><a href="#_46-加载海量数据" class="header-anchor">#</a> 46.加载海量数据</h3> <div class="language- extra-class"><pre class="language-text"><code>1.缩短循环时间
+	requestAniminationFrame通过分治的思想，将 100000 个 li 分批插入到页面中，并且我们通过 requestAniminationFrame 在页面重绘前插入新节点
+2.减少DOM操作次数
+	DocumentFragment（MDN）可以减少DOM操作次数，降低回流对性能的影响。
+	时间委托可以显著减少DOM操作次数
+
+</code></pre></div><h3 id="_47-defer和sync区别"><a href="#_47-defer和sync区别" class="header-anchor">#</a> 47.defer和sync区别</h3> <div class="language- extra-class"><pre class="language-text"><code>作用：两者的作用都是差不多的，使js异步加载，从而不会对DOM生成造成阻塞
+defer: 表示js脚本在DOMContentLoaded事件之前执行
+async：表示js脚本一旦加载完成，立即执行
+</code></pre></div><h3 id="_48-async-await原理"><a href="#_48-async-await原理" class="header-anchor">#</a> 48.async await原理</h3> <div class="language- extra-class"><pre class="language-text"><code>1.Promise 和 生成器的应用，往底层说就是微任务与协程的应用。
+2.async函数：异步执行和隐式返回promise
+	在里面的返回值都是 Promise {&lt;resolved&gt;: 返回的东西}
+3.await关键字：默认帮我们创建Promise对象
+	1.在里面executor函数中调用了resolve
+	2.然后JS引擎暂停当前协程执行，将主线程控制权给父协程执行，同时把promise对象返回给父协程
+	3.然后父协程调用promise.then来监控promise改变状态
+</code></pre></div><h3 id="_49-this指向"><a href="#_49-this指向" class="header-anchor">#</a> 49.this指向</h3> <div class="language- extra-class"><pre class="language-text"><code>1.规则一：默认绑定
+	不通过任何第三方调用，直接指向window
+2.规则二：隐式绑定
+	由谁发起调用，就指向谁 obj1.foo()  this=&gt;obj1
+3.规则三：显示绑定
+	call，apply，bind
+4.规则四：new绑定this
+
+this指向的优先级：new&gt;显示绑定&gt;隐式绑定&gt;默认绑定
+</code></pre></div><h3 id="_50-js如何解析的"><a href="#_50-js如何解析的" class="header-anchor">#</a> 50.JS如何解析的</h3> <div class="language- extra-class"><pre class="language-text"><code>1.JS源码通过Parse模块生成抽象语法树AST。
+2.AST通过Ignition模块将语法树解析成字节码。
+3.字节码进步转成汇编，机器码，最后交给CPU执行。
+</code></pre></div><h3 id="_51-promise-all"><a href="#_51-promise-all" class="header-anchor">#</a> 51.promise.all</h3> <div class="language- extra-class"><pre class="language-text"><code>
+</code></pre></div><h3 id="_52-promise-retry"><a href="#_52-promise-retry" class="header-anchor">#</a> 52.promise.retry</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function-variable function">retry</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> times<span class="token punctuation">,</span> delay</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> err <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">var</span> <span class="token function-variable function">attempt</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>resolve<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Attempt #</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>times<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> failed</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">0</span> <span class="token operator">==</span> times<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          times<span class="token operator">--</span><span class="token punctuation">;</span>
+          <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">attempt</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span> delay<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token function">attempt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="_53-scr和href区别"><a href="#_53-scr和href区别" class="header-anchor">#</a> 53.scr和href区别</h3> <div class="language- extra-class"><pre class="language-text"><code>1.href：超文本引用，一般用在link和a等元素上，引用和页面关联的关系
+2.src：代表着资源，img，script上面，是指向外部资源的位置，会把它下载到当前的文档中，js脚本，img图片等等。
+</code></pre></div><h3 id="_54-前端路由实现"><a href="#_54-前端路由实现" class="header-anchor">#</a> 54.前端路由实现</h3> <div class="language- extra-class"><pre class="language-text"><code>1.hash路由：原生方法实现好了
+	1.在window上监听hashChange事件，监听location.hash改变。
+	2.在里面switch case，匹配相应的路由，再去展示相应的组件
+
+2.history路由：
+	history是H5新出的，所以没有原生监听事件，需要自己去实现。
+	1.首先需要改变a标签的默认行为，e.preventDefault();
+	2.为a标签添加点击事件
+		1.获取a标签里面的href属性，
+		2.el.getAttribute(&quot;href&quot;),history.pushState({}, &quot;&quot;, href);
+		3.调用自己定义的URLChange方法。
+	3.URLChange方法里面做的事情就是switch case，去匹配location.pathname，匹配上了，展示相应的组件即可。
+</code></pre></div><h3 id="_55-深拷贝浅拷贝"><a href="#_55-深拷贝浅拷贝" class="header-anchor">#</a> 55.深拷贝浅拷贝</h3> <div class="language- extra-class"><pre class="language-text"><code>浅拷贝：只拷贝一层，如果存在两层以上无法拷贝，他会将被嵌套的对象的地址值赋值给它，但里面的内容是存在的，只是赋值而已，不是拷贝。
+	1.扩展运算符... let obj1 = {...originObj}
+	2.Object.assign({}, originObj)
+	3.手动实现，只需要遍历一层属性，直接赋值即可
+	4.数组有slice，concat
+	
+深拷贝：存在两层以上都可以进行拷贝，使得整个对象都和源对象无关
+	1.手动实现，需要递归，先判断该属性的类型是对象还是值类型，对象就进入递归
+	2.JSON.parse(JSON.stringify(obj));
+		缺陷：1.会忽略undefined、symbol和函数 2.循环引用会报错
+
+考虑循环引用深拷贝：hashMap
+
+</code></pre></div><h3 id="_56-洗牌算法"><a href="#_56-洗牌算法" class="header-anchor">#</a> 56.洗牌算法</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">shuffle</span><span class="token punctuation">(</span><span class="token parameter">arr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 每次从未处理的数组中随机取一个元素，</span>
+  <span class="token comment">// 然后把该元素放到数组的尾部，</span>
+  <span class="token comment">// 即数组的尾部放的就是已经处理过的元素，</span>
+  <span class="token keyword">let</span> n <span class="token operator">=</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">,</span> random<span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token number">0</span> <span class="token operator">!=</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//&gt;&gt;&gt;作用是向下取整？</span>
+    random <span class="token operator">=</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> n<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token operator">&gt;&gt;&gt;</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// 无符号右移位运算符向下取整</span>
+    <span class="token punctuation">[</span>arr<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>random<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>arr<span class="token punctuation">[</span>random<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token comment">// ES6的结构赋值实现变量互换</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_57-虚拟dom"><a href="#_57-虚拟dom" class="header-anchor">#</a> 57.虚拟DOM</h3> <div class="language- extra-class"><pre class="language-text"><code>我对虚拟DOM的理解是：
+
+我们对将要插入到文档的DOM树进行分析，使用js对象的形式将DOM层级情况进行描述，tagname，props，children。最后将js对象树，插入到文档中。
+
+当页面结构发生改变，需要对DOM结构进行调整，先根据变更的状态，重新构建一个对象树，然后对比两个虚拟DOM对象，记录下两个树的差异。最后将记录的差异更新到真实DOM中，这样试图就更新了。
+
+虚拟DOM在大量修改DOM的时候，可以很好的提高操作效率，通过在操作前确定需要做的最小修改，尽可能较少DOM操作带来的重排重绘。
+</code></pre></div><h3 id="_58-快速排序"><a href="#_58-快速排序" class="header-anchor">#</a> 58.快速排序</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">quickSort</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">array</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>array<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> array<span class="token punctuation">;</span>
+  <span class="token keyword">let</span> left <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> right <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> curr <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>curr<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      left<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+		<span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+      right<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token function">quickSort</span><span class="token punctuation">(</span>left<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>curr<span class="token punctuation">,</span><span class="token function">quickSort</span><span class="token punctuation">(</span>right<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> 
+</code></pre></div><h3 id="_59-0、-0-结果是什么-为什么"><a href="#_59-0、-0-结果是什么-为什么" class="header-anchor">#</a> 59.[] == 0、[] == &quot;&quot;, []=='0' 结果是什么，为什么</h3> <h3 id="_59-转换规则"><a href="#_59-转换规则" class="header-anchor">#</a> 59.==转换规则</h3> <h3 id="_60-非递归实现快排"><a href="#_60-非递归实现快排" class="header-anchor">#</a> 60.非递归实现快排</h3> <h3 id="_61-判断对象是否为空"><a href="#_61-判断对象是否为空" class="header-anchor">#</a> 61.判断对象是否为空</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">checkNullObj</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_62-encodeuri和encodeuricomponent区别"><a href="#_62-encodeuri和encodeuricomponent区别" class="header-anchor">#</a> 62.encodeURI和encodeURIComponent区别</h3> <div class="language- extra-class"><pre class="language-text"><code>都是编码URL，唯一区别就是编码的字符范围
+encodeURI方法作用范围小										encodeURIComponent区别作用范围大
+适合用于解析域名之类的，域名特殊字符不会被解析	 域名中的特殊字符/会被转义，适合编码URL参数		
+</code></pre></div><h3 id="_63-数组去重怎么考虑nan"><a href="#_63-数组去重怎么考虑nan" class="header-anchor">#</a> 63.数组去重怎么考虑NaN</h3> <div class="language- extra-class"><pre class="language-text"><code>1.使用map和set数据结构，可以进行识别map.has(NaN)会被判断成true
+</code></pre></div><h3 id="_64-搜索发起请求-下面显示数据不对"><a href="#_64-搜索发起请求-下面显示数据不对" class="header-anchor">#</a> 64.搜索发起请求，下面显示数据不对</h3> <div class="language- extra-class"><pre class="language-text"><code>1.打断上一次请求
+2.节流防抖
+3.看时间戳
+</code></pre></div><h3 id="_65-中断一个网络请求"><a href="#_65-中断一个网络请求" class="header-anchor">#</a> 65.中断一个网络请求</h3> <div class="language- extra-class"><pre class="language-text"><code>XHR: 
+	1.xhr.abort()
+Fetch:
+	1.const controller = new AbortController() 
+	controller.abort()即可；
+</code></pre></div><h3 id="_66-prototype和-proto区别"><a href="#_66-prototype和-proto区别" class="header-anchor">#</a> 66.prototype和__proto区别</h3> <div class="language- extra-class"><pre class="language-text"><code>1.__proto__ 存在于所有对象上，prototype 只存在于函数上。
+2.__proto__ 用来表示当前对象的原型对象是什么，在检索属性时方便在原型链上递归向上去查找，实现了 obj.__proto__.__proto__... 原型链
+3.prototype 用来表示使用此构造函数初始化的对象继承自哪个原型对象
+
+Function.prototype.__proto__ = Object.prototype;
+</code></pre></div><h3 id="_67-二维码登录"><a href="#_67-二维码登录" class="header-anchor">#</a> 67.二维码登录</h3> <div class="language- extra-class"><pre class="language-text"><code>1.首先设备需要联网，携带设备信息向服务器请求生成二维码
+2.生成二维码ID与该设备绑定，返回二维码ID，并在设备上端展示
+3.扫描二维码，识别二维码ID
+4.把手机上的token，二维码信息，发送给服务端
+5.二维码与身份信息绑定，生成token（临时），并且返回给手机那边
+6.携带token发送给服务端，确认登录，
+7.返回token给设备，凭借Token去请求数据。
+</code></pre></div><h3 id="_68-bind的作用"><a href="#_68-bind的作用" class="header-anchor">#</a> 68.bind的作用</h3> <div class="language- extra-class"><pre class="language-text"><code>1.改变this指向
+2.创建一个新的函数，需要我们手动的去执行它。不像call，apply可以自动执行
+</code></pre></div><h3 id="_69-斐波那契函数"><a href="#_69-斐波那契函数" class="header-anchor">#</a> 69.斐波那契函数</h3> <div class="language-js extra-class"><pre class="language-js"><code>int <span class="token function">fib</span><span class="token punctuation">(</span><span class="token parameter">int <span class="token constant">N</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token constant">N</span> <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">||</span> <span class="token constant">N</span> <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span> 
+  <span class="token keyword">return</span> <span class="token function">fib</span><span class="token punctuation">(</span><span class="token constant">N</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">fib</span><span class="token punctuation">(</span><span class="token constant">N</span> <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token constant">O</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">^</span>n<span class="token punctuation">)</span>
+</code></pre></div><h3 id="_70-纯函数"><a href="#_70-纯函数" class="header-anchor">#</a> 70.纯函数</h3> <div class="language- extra-class"><pre class="language-text"><code>概念：
+	1.是函数式编程的重要概念，不仅限于JS，JS符合函数式编程，所以也有纯函数的概念。
+	2.在函数中相同的输入值，就必须返回相同输出值。（重点）
+	3.输入和输出值以外的其他隐藏信息无关，也和你的设备环境无关
+	4.不能有副作用，比如修改了全局变量，修改了参数等外部条件，特别容易产生bug
+应用场景
+	1.React纯组件
+	2.redux中的reducer
+	3.slice就是一个纯函数，不会对原数组进行任何操作，而是生成一个新数组（splice就不是，返回新数组，也会对原数		 组进行修改）
+
+例子：
+副作用
+</code></pre></div><h3 id="_71-柯里化"><a href="#_71-柯里化" class="header-anchor">#</a> 71.柯里化</h3> <div class="language- extra-class"><pre class="language-text"><code>概念：
+	1.只传递给函数一部分参数来调用它，让他返回一个函数去调用处理剩余的参数
+	2.这个过程就叫柯里化
+</code></pre></div><h3 id="_72-高阶函数"><a href="#_72-高阶函数" class="header-anchor">#</a> 72.高阶函数</h3> <div class="language- extra-class"><pre class="language-text"><code>概念：
+	维基百科定义：只需要满足下面的其中一个条件：
+		1.接受一个或者多个函数作为输入
+		2.输出一个函数
+例子：filter，map，reduce都是高阶函数
+
+应用：高阶组件，返回值为新组建的函数
+</code></pre></div><h3 id="_73-类数组"><a href="#_73-类数组" class="header-anchor">#</a> 73.类数组</h3> <div class="language- extra-class"><pre class="language-text"><code>let say = function () {
+ console.log(arguments)
+}
+say(1, 2)
+{
+  0: 1
+  1: 2
+  length: 2
+}
+1.什么是类数组：
+	这个arguments就是一个类数组，有length属性，不能访问数组方法，但是可以通过索引来访问，还可以将其转换成数组
+2.如果一个普通的对象加上一个 length 属性就可以变成一个类数组对象。
+3.转换
+1.
+let say = function () {
+ console.log(Array.from(arguments))
+}
+say(1, 2)
+// [1, 2]
+2.
+Array.prototype.slice.call(arguments)
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新于:</span> <span class="time">2/9/2022, 6:39:38 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.922e2828.js" defer></script><script src="/assets/js/2.d7ac843b.js" defer></script><script src="/assets/js/88.a52426df.js" defer></script>
+  </body>
+</html>

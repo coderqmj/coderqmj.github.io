@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1.webpack的用途 | coderqmj的博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/avatar.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.64f7ac41.css" as="style"><link rel="preload" href="/assets/js/app.922e2828.js" as="script"><link rel="preload" href="/assets/js/2.d7ac843b.js" as="script"><link rel="preload" href="/assets/js/94.8e0db68a.js" as="script"><link rel="prefetch" href="/assets/js/10.7b3d9b0c.js"><link rel="prefetch" href="/assets/js/100.486e622c.js"><link rel="prefetch" href="/assets/js/101.d6e1dc74.js"><link rel="prefetch" href="/assets/js/102.7dd0bb36.js"><link rel="prefetch" href="/assets/js/103.c70d0e4e.js"><link rel="prefetch" href="/assets/js/104.6cea9b68.js"><link rel="prefetch" href="/assets/js/105.88d5190c.js"><link rel="prefetch" href="/assets/js/106.0873e8a7.js"><link rel="prefetch" href="/assets/js/107.aca94093.js"><link rel="prefetch" href="/assets/js/108.bca217a4.js"><link rel="prefetch" href="/assets/js/109.5f4a8562.js"><link rel="prefetch" href="/assets/js/11.3db82a7b.js"><link rel="prefetch" href="/assets/js/110.4f43d13c.js"><link rel="prefetch" href="/assets/js/111.12faead2.js"><link rel="prefetch" href="/assets/js/112.6a100fc4.js"><link rel="prefetch" href="/assets/js/113.b635ecb3.js"><link rel="prefetch" href="/assets/js/114.2fc49843.js"><link rel="prefetch" href="/assets/js/115.9bbd97fe.js"><link rel="prefetch" href="/assets/js/116.0111b15f.js"><link rel="prefetch" href="/assets/js/117.2a08ade6.js"><link rel="prefetch" href="/assets/js/118.d5f21bef.js"><link rel="prefetch" href="/assets/js/119.a4028cab.js"><link rel="prefetch" href="/assets/js/12.0d96d9ee.js"><link rel="prefetch" href="/assets/js/120.24ca1007.js"><link rel="prefetch" href="/assets/js/121.cd8ad292.js"><link rel="prefetch" href="/assets/js/122.9e44a8bf.js"><link rel="prefetch" href="/assets/js/123.75a2e13c.js"><link rel="prefetch" href="/assets/js/124.fba7ba6c.js"><link rel="prefetch" href="/assets/js/125.751f3e3f.js"><link rel="prefetch" href="/assets/js/126.6546e225.js"><link rel="prefetch" href="/assets/js/127.e6ffe9f0.js"><link rel="prefetch" href="/assets/js/128.5ba61cba.js"><link rel="prefetch" href="/assets/js/129.5cf13129.js"><link rel="prefetch" href="/assets/js/13.f663b287.js"><link rel="prefetch" href="/assets/js/130.8cf31a88.js"><link rel="prefetch" href="/assets/js/131.a8879ecb.js"><link rel="prefetch" href="/assets/js/132.309606b3.js"><link rel="prefetch" href="/assets/js/133.4ca29821.js"><link rel="prefetch" href="/assets/js/134.5952e738.js"><link rel="prefetch" href="/assets/js/14.f62f380d.js"><link rel="prefetch" href="/assets/js/15.d8470657.js"><link rel="prefetch" href="/assets/js/16.642b34d5.js"><link rel="prefetch" href="/assets/js/17.449c4fca.js"><link rel="prefetch" href="/assets/js/18.979e104a.js"><link rel="prefetch" href="/assets/js/19.58c49ce8.js"><link rel="prefetch" href="/assets/js/20.26fae8f2.js"><link rel="prefetch" href="/assets/js/21.39a99ff9.js"><link rel="prefetch" href="/assets/js/22.f59b98cf.js"><link rel="prefetch" href="/assets/js/23.a92e121d.js"><link rel="prefetch" href="/assets/js/24.6b0ab34d.js"><link rel="prefetch" href="/assets/js/25.59b56b46.js"><link rel="prefetch" href="/assets/js/26.0aa4999f.js"><link rel="prefetch" href="/assets/js/27.e99a8129.js"><link rel="prefetch" href="/assets/js/28.c7dd852e.js"><link rel="prefetch" href="/assets/js/29.999d3392.js"><link rel="prefetch" href="/assets/js/3.1f6a410f.js"><link rel="prefetch" href="/assets/js/30.2efdf158.js"><link rel="prefetch" href="/assets/js/31.82f0b64f.js"><link rel="prefetch" href="/assets/js/32.68df0343.js"><link rel="prefetch" href="/assets/js/33.3a7ea0a7.js"><link rel="prefetch" href="/assets/js/34.687b3b61.js"><link rel="prefetch" href="/assets/js/35.39c120eb.js"><link rel="prefetch" href="/assets/js/36.4449a7d9.js"><link rel="prefetch" href="/assets/js/37.9532964a.js"><link rel="prefetch" href="/assets/js/38.144e8bb9.js"><link rel="prefetch" href="/assets/js/39.2abf6f30.js"><link rel="prefetch" href="/assets/js/4.bdb68f26.js"><link rel="prefetch" href="/assets/js/40.7fac4b90.js"><link rel="prefetch" href="/assets/js/41.9011a251.js"><link rel="prefetch" href="/assets/js/42.8e84c1e4.js"><link rel="prefetch" href="/assets/js/43.419e4228.js"><link rel="prefetch" href="/assets/js/44.79192e61.js"><link rel="prefetch" href="/assets/js/45.4e83ef2a.js"><link rel="prefetch" href="/assets/js/46.536b615b.js"><link rel="prefetch" href="/assets/js/47.81416819.js"><link rel="prefetch" href="/assets/js/48.f1a49526.js"><link rel="prefetch" href="/assets/js/49.901c2a97.js"><link rel="prefetch" href="/assets/js/5.610e1eb4.js"><link rel="prefetch" href="/assets/js/50.148207f2.js"><link rel="prefetch" href="/assets/js/51.317f41c5.js"><link rel="prefetch" href="/assets/js/52.a6cfe0c4.js"><link rel="prefetch" href="/assets/js/53.31c15faa.js"><link rel="prefetch" href="/assets/js/54.86e49cfb.js"><link rel="prefetch" href="/assets/js/55.7e2c8fc0.js"><link rel="prefetch" href="/assets/js/56.699dc67d.js"><link rel="prefetch" href="/assets/js/57.33564c0f.js"><link rel="prefetch" href="/assets/js/58.87b42eb5.js"><link rel="prefetch" href="/assets/js/59.507ceb32.js"><link rel="prefetch" href="/assets/js/6.ec9aaafc.js"><link rel="prefetch" href="/assets/js/60.5a66cc53.js"><link rel="prefetch" href="/assets/js/61.92b1805f.js"><link rel="prefetch" href="/assets/js/62.caf5e68e.js"><link rel="prefetch" href="/assets/js/63.7817522c.js"><link rel="prefetch" href="/assets/js/64.e857c815.js"><link rel="prefetch" href="/assets/js/65.54c955d6.js"><link rel="prefetch" href="/assets/js/66.4dbd3059.js"><link rel="prefetch" href="/assets/js/67.9b678f79.js"><link rel="prefetch" href="/assets/js/68.081769bd.js"><link rel="prefetch" href="/assets/js/69.68a243e0.js"><link rel="prefetch" href="/assets/js/7.7d5d2905.js"><link rel="prefetch" href="/assets/js/70.3cf2db12.js"><link rel="prefetch" href="/assets/js/71.ae28c841.js"><link rel="prefetch" href="/assets/js/72.91f99661.js"><link rel="prefetch" href="/assets/js/73.31290ec1.js"><link rel="prefetch" href="/assets/js/74.3b64e893.js"><link rel="prefetch" href="/assets/js/75.816b9303.js"><link rel="prefetch" href="/assets/js/76.decf1ed4.js"><link rel="prefetch" href="/assets/js/77.d27ebbbb.js"><link rel="prefetch" href="/assets/js/78.2222d4be.js"><link rel="prefetch" href="/assets/js/79.256139d8.js"><link rel="prefetch" href="/assets/js/8.42123a36.js"><link rel="prefetch" href="/assets/js/80.16680d3c.js"><link rel="prefetch" href="/assets/js/81.2f786598.js"><link rel="prefetch" href="/assets/js/82.911631e1.js"><link rel="prefetch" href="/assets/js/83.4cb96d07.js"><link rel="prefetch" href="/assets/js/84.06e4f668.js"><link rel="prefetch" href="/assets/js/85.e77e6e1e.js"><link rel="prefetch" href="/assets/js/86.d2ef0414.js"><link rel="prefetch" href="/assets/js/87.bf848bae.js"><link rel="prefetch" href="/assets/js/88.a52426df.js"><link rel="prefetch" href="/assets/js/89.b57aa852.js"><link rel="prefetch" href="/assets/js/9.b646ca99.js"><link rel="prefetch" href="/assets/js/90.f3adce23.js"><link rel="prefetch" href="/assets/js/91.aef49fa5.js"><link rel="prefetch" href="/assets/js/92.b5faa774.js"><link rel="prefetch" href="/assets/js/93.1106a757.js"><link rel="prefetch" href="/assets/js/95.18fe0149.js"><link rel="prefetch" href="/assets/js/96.9256b873.js"><link rel="prefetch" href="/assets/js/97.94de60a0.js"><link rel="prefetch" href="/assets/js/98.f196f022.js"><link rel="prefetch" href="/assets/js/99.00436cae.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.64f7ac41.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/avatar.png" alt="coderqmj的博客" class="logo"> <span class="site-name can-hide">coderqmj的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  文章
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  琐碎
+</a></li></ul></div></div><div class="nav-item"><a href="https://leetcode-cn.com/u/2vgrNDufDX/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/coderqmj" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  文章
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JavaScript/实现拖拽.html" class="nav-link">
+  琐碎
+</a></li></ul></div></div><div class="nav-item"><a href="https://leetcode-cn.com/u/2vgrNDufDX/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/coderqmj" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>计算机网络</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/ComputerNet/HTTP.html" class="sidebar-link">1.HTTP相关</a></li><li><a href="/pages/ComputerNet/七层模型.html" class="sidebar-link">2.七/四/五层模型</a></li><li><a href="/pages/ComputerNet/浏览器缓存.html" class="sidebar-link">浏览器缓存</a></li><li><a href="/pages/ComputerNet/HTTPS.html" class="sidebar-link">HTTPS</a></li><li><a href="/pages/ComputerNet/浏览器安全.html" class="sidebar-link">浏览器安全</a></li><li><a href="/pages/ComputerNet/浏览器性能优化.html" class="sidebar-link">浏览器性能优化</a></li><li><a href="/pages/ComputerNet/HTTP历史.html" class="sidebar-link">HTTP历史</a></li><li><a href="/pages/ComputerNet/HTTP请求流程.html" class="sidebar-link">HTTP请求流程</a></li><li><a href="/pages/ComputerNet/JavaScript如何影响DOM树构建.html" class="sidebar-link">JavaScript如何影响DOM树构建</a></li><li><a href="/pages/ComputerNet/CSS如何影响首次白屏.html" class="sidebar-link">CSS如何影响首次白屏</a></li><li><a href="/pages/ComputerNet/分层合成：为什么CSS比JS高效.html" class="sidebar-link">分层合成：为什么CSS比JS高效</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>NODE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>构建工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构与算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>GIT教程</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>TypeScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>正则表达式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>项目</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>三方库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>实习遇到的问题及成长</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>腾讯工作的思考与总结</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>琐碎</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="_1-webpack的用途"><a href="#_1-webpack的用途" class="header-anchor">#</a> 1.webpack的用途</h3> <div class="language- extra-class"><pre class="language-text"><code>1.最主要是模块化打包。现在的前端根本离不开模块化开发，将不通模块的文件整合起来，保证他们之间的引用正确。这样我们在开发的时候就可以自由的按照视图或者业务功能去划分模块。这样就保证了项目结构是非常清晰的，可阅读性非常强，这样的项目也便于自己维护和向他人交接。
+
+2.编译兼容。早前我们的代码需要手动去兼容各种各样的浏览器，这样大大影响开发效率，有了webpack之后我们就可以通过polyfill去对不支持高级语法的浏览器打补丁，Browserslist设置命中的浏览器，使用PostCSS loader 和 postcss-preset-env插件去对不同的浏览器做适配，让该css被大多数浏览器识别。
+
+3.能力扩展。通过webpack的Plugin，我们可以进一步实现按需加载，压缩代码，Tree Shaking，懒加载等一系列的优化和一些其他的功能。比如分析每一个打包出来文件的大小，这样就可以对其进行分析去优化某一个模块。
+</code></pre></div><h3 id="_2-10个js用到1个-怎么优化打包"><a href="#_2-10个js用到1个-怎么优化打包" class="header-anchor">#</a> 2.10个js用到1个，怎么优化打包</h3> <h3 id="_3-postcss的作用"><a href="#_3-postcss的作用" class="header-anchor">#</a> 3.postcss的作用</h3> <div class="language- extra-class"><pre class="language-text"><code>1.进行查询浏览器兼容，最近两个版本，not dead
+2.查询到后为css添加前缀，样式重置等操作
+</code></pre></div><h4 id="_4-loader和plugins的区别"><a href="#_4-loader和plugins的区别" class="header-anchor">#</a> 4.loader和plugins的区别</h4> <div class="language- extra-class"><pre class="language-text"><code>我理解的loader和plugins是：
+	0.官方的描述：
+		1.loaders是用于转换一些特定的模块类型的，例如css，less，png这些资源。
+		2.plugin是用于执行更加广泛的任务，打包优化，资源管理，环境变量注入等
+	1.loader中可以使用插件，且plugins是一个数组，一个loader可以使用多个plugin
+	2.loader放在module中，plugin放在plugins中
+	例子：
+		1.加载css文件需要loader，但是把多个CSS文件合并成1和就需要plugin
+		2.每次打包后希望删除之前目录的文件，重新生成新的文件夹，就需要clean-webpack-plugin插件
+</code></pre></div><h3 id="_5-webpack5新特性"><a href="#_5-webpack5新特性" class="header-anchor">#</a> 5.webpack5新特性</h3> <div class="language- extra-class"><pre class="language-text"><code>1.加载其他资源无需安装file-loader，url-loader，直接使用asset module type模块，使其可以加载图片资源，配置存放路径等。
+</code></pre></div><h3 id="_6-babel"><a href="#_6-babel" class="header-anchor">#</a> 6.babel</h3> <div class="language- extra-class"><pre class="language-text"><code>1.babel是什么？
+	babel是一个工具链，主要用于旧浏览器或者缓解中将ES2015+代码转换为向后兼容版本的JS
+	包括语法转换、源代码转换、Polyfill实现目标缓解缺少的功能等
+2.babel有哪些插件？
+	1.@babel/core必装，就像postcss一样功能少，但是是必须项
+	2.@babel/cli 可以在命令行中使用
+	3.@babel/plugin-transform-arrow-functions 转换箭头函数
+	4.@babel/plugin-transform-block-scoping 转换let const
+	5.@babel/preset-env 预设，可以一次性转换需要转换的，无需一个个书写
+3.babel的原理（如何将一段（ES6，TS，React）转成领哟段代码（ES5）的呢？）
+	1.可以把babel看成一个编译器，就跟V8引擎一样，源代码-&gt;原AST-&gt;新AST-&gt;浏览器识别的字节码
+	2.总体来说就是把自己的源代码转换成浏览器可以直接识别的另一段代码
+	3.例子，就像把lisp语言转换成C语言一样，再去编译，链接，执行
+</code></pre></div><h3 id="_7-babel的编译器工作流程"><a href="#_7-babel的编译器工作流程" class="header-anchor">#</a> 7.babel的编译器工作流程</h3> <div class="language- extra-class"><pre class="language-text"><code>1.解析阶段
+2.转换阶段
+3.生成阶段
+</code></pre></div><h3 id="_8-注意的点"><a href="#_8-注意的点" class="header-anchor">#</a> 8.注意的点</h3> <div class="language- extra-class"><pre class="language-text"><code>1.使用polyfill时，要把node_module排除一下，不然包里面可能已经实现过一遍，再去用polyfill会出现安全隐患。
+</code></pre></div><h3 id="_9-什么是polyfill-怎么用"><a href="#_9-什么是polyfill-怎么用" class="header-anchor">#</a> 9.什么是polyfill？怎么用？</h3> <div class="language- extra-class"><pre class="language-text"><code>1.帮助我们更好的去使用JS新特性，像promise，generator，这些特性有些浏览器是不认识的，运行代码时就会报错，这时候我们用polyfill来填充补丁，浏览器就可以识别了。
+2.本质其实就是帮我们去实现一遍。
+3.缺点就是打包过后的代码帮我们增加了许多代码，体积变大
+
+用法：
+	1.安装， npm i  @babel/polyfill
+		但现在推荐安装core-js和regenerator-runtime，因为polyfill已经过时了
+	2.在babel.config.js中配置
+module.exports = {
+  presets: [
+    [&quot;@babel/preset-env&quot;, {
+      // false: 不用任何的polyfill相关的代码
+      // usage: 代码中需要哪些polyfill, 就引用相关的api
+      // entry: 手动在入口文件中导入 core-js/regenerator-runtime, 根据目标浏览器引入所有对应的polyfill
+      useBuiltIns: &quot;entry&quot;,
+      corejs: 3
+    }],
+    [&quot;@babel/preset-react&quot;]
+  ],
+  // plugins: [
+  //   [&quot;@babel/plugin-transform-runtime&quot;, {
+  //     corejs: 3
+  //   }]
+  // ]
+}
+	3.然后再文件中引入
+	import &quot;core-js/stable&quot;;
+	import &quot;regenerator-runtime/runtime&quot;;
+</code></pre></div><h3 id="_10-babel-loader的优缺点"><a href="#_10-babel-loader的优缺点" class="header-anchor">#</a> 10.babel-loader的优缺点</h3> <div class="language- extra-class"><pre class="language-text"><code>优点：
+	1.最大的优点就是有polyfill了
+缺点：
+	1.不会对ts做类型检测，传入错误的类型也以打包成功，导致上线的代码有安全隐患。
+</code></pre></div><h3 id="_11-模块热更新"><a href="#_11-模块热更新" class="header-anchor">#</a> 11.模块热更新</h3> <div class="language- extra-class"><pre class="language-text"><code>热更新的方法有3：
+  1.dev-server，直接添加watch命令
+  2.webpack-dev-server插件
+  3.HMR（重点）
+1.直接添加watch命令并执行：
+	1.1.监听文件的变化然后重新编译。
+	1.2.且重新编译后都会生成新的文件，要进行I/O操作。
+	1.3.刷新整个页面，状态不会被保存
+	1.4.属于效率、性能都非常低下的解决方案
+2.使用webpack-dev-server插件：
+	2.1.相比于第一种方法，这种不涉及到文件I/O操作，性能略好
+	2.2.所有代码还是会重新编译，性能差
+	2.3.编译后的文件不会存在本地，而是放到内存里面，从内存直接加载性能有点提升
+	2.4.该缓存技术之前用的是memory-fs，现在用的是memfs这个库
+3.HMR（Hot module replacement）
+	3.1.程序在运行的过程中，无需替换、添加、删除模块，所以无需刷新整个页面
+	3.2.状态不会丢失
+	3.3.修改JS、css源代码，会立即在浏览器更新，相当于直接在浏览器的devtools中直接修		改样式
+</code></pre></div><h3 id="_12-性能优化的点"><a href="#_12-性能优化的点" class="header-anchor">#</a> 12.性能优化的点</h3> <div class="language- extra-class"><pre class="language-text"><code>1.devServer中设置compress为true，可以压缩打包后的文件，传输成本小。
+2.代码分离，提升首页渲染速度
+</code></pre></div><h3 id="_13-小知识点"><a href="#_13-小知识点" class="header-anchor">#</a> 13.小知识点</h3> <div class="language- extra-class"><pre class="language-text"><code>1.entry的值并不是相对于改文件的相对路径，而是context配置路径（官方要求绝对路径）
+</code></pre></div><h3 id="_14-webpack如何做配置分离"><a href="#_14-webpack如何做配置分离" class="header-anchor">#</a> 14.webpack如何做配置分离</h3> <div class="language- extra-class"><pre class="language-text"><code>1.我的策略是先把配置类型分为3种：
+	1.公共配置
+	2.开发/运行模式配置
+	3.生成模式配置
+2.把运行模式需要的配置放入单独一个文件，一般以webpack.dev.js命名
+3.把生产模式下需要的配置放入单独的文件，一般以webpack.prod.js命名
+4.公共文件需要做的事情
+	1.把公共配置写好，使用。
+	2.module.exports = function(env) { } 写成功函数，便于使用mode的值
+	3.根据env.production去判断是否为生产环境
+	4.导入merge模块去合并，使commonConfig与生产配置或者运行配置合并
+	5.返回这个配置并运用
+5.有些时候还需要配置一些babel.config.js相关的插件：
+	1.比如HMR模块热更新需要的插件，是运行环境才需要&quot;react-refresh/babel&quot;
+	2.根据process.env.NODE_ENV去判断当前的模式
+6.然后在package.json里面去指定哪个webpack文件去打包/运行项目 
+	1.通过--config
+</code></pre></div><h3 id="_15-babel和polyfill的区别和关系"><a href="#_15-babel和polyfill的区别和关系" class="header-anchor">#</a> 15.babel和Polyfill的区别和关系</h3> <h3 id="_16-webpack和vite的区别"><a href="#_16-webpack和vite的区别" class="header-anchor">#</a> 16.webpack和vite的区别</h3> <div class="language- extra-class"><pre class="language-text"><code>1.vite
+	1.官方定义是下一代前端构建工具。
+	2.基于原生ES模块提供了丰富的内建功能，HMR的速度非常快
+	3.预配置了rollup，可以输出生产环境的优化过的静态资源
+	4.vite还是不够稳定，社区不够完善
+	5.基本上无配置（postcss相关还是得配下插件），支持vue就需要配置
+	6.有些基础的东西是预配置了，比如文件后缀名，查找模块，ts，css就不用css-loader
+	7.会对依赖做一些预打包的操作放在module中的.vite文件夹中，比如预打包vue，lodash，下一次跑的时候就可以节省这个时间了
+</code></pre></div><h3 id="_17-vite的原理"><a href="#_17-vite的原理" class="header-anchor">#</a> 17.vite的原理</h3> <div class="language- extra-class"><pre class="language-text"><code></code></pre></div><h3 id="_18-tree-shaking如何做到的"><a href="#_18-tree-shaking如何做到的" class="header-anchor">#</a> 18.Tree Shaking如何做到的</h3> <div class="language- extra-class"><pre class="language-text"><code>概念：用于消除一些无用的代码（dead_code和一些定义但是未使用的代码），其中包括JS的Tree Shaking和css的Tree Shaking。
+
+最佳实现：
+	1.最佳实践就是结合optimization中的usedExports，optimization中的minimizer中的terserOptions的dead_code，再结合package.json的副作用选项sideEffects，去尽可能消除dead_code。
+
+具体步骤：
+	1.webpack优化选项里面开启usedExports为true，这个时候去打包代码就会发现dead_code会被注释打上标记（unused code）。
+	2.然后再优化选项里面开启minimizer，再里面使用terser-webpack-plugin插件，压缩代码dead_code: true，这个时候发现被打上标记的代码被消除了。但是如果有一些导入但未使用的代码，是无法被消除的，比如&quot;import './format.js'&quot;还有一些样式的导入&quot;import './index.css'&quot;。
+	3.这个时候就需要借助package.json里面的消除副作用字段了：
+		1.sideEffects: false，代表所有无效导入都是没有副作用的，可以安心删除，反正都不能删除
+		2.如果是一个数组的话，把文件路径给进去代表这里面的文件是有副作用的，但注意，需要把css的导入都加上去，否则会被消除
+		3.但是我们最优解都是sideEffects: false，然后在loader中去配置css都为sideEffects: true 。
+</code></pre></div><h3 id="_19-模块打包运行原理"><a href="#_19-模块打包运行原理" class="header-anchor">#</a> 19.模块打包运行原理</h3> <div class="language- extra-class"><pre class="language-text"><code></code></pre></div><h3 id="_20-什么是source-map"><a href="#_20-什么是source-map" class="header-anchor">#</a> 20.什么是source-map</h3> <div class="language- extra-class"><pre class="language-text"><code>1.背景：
+	开发阶段浏览器上跑的代码，是经过各种转换和压缩的，和我们自己编写的代码差异还是较大的，行号列号最终基本对应不上。这样我们代码报错的时候很难去定位问题。我们需要知道编译、打包、压缩后的代码映射回去，于是source-map就诞生了。
+
+2.作用：
+	source-map帮我们快速定位到源代码的位置，提高我们的开发效率。打包生成的js文件都有对应的一个map文件，该js文件最后一行有一个注释//# sourceMappingURL=761.50f6fa.chunk.js.map 指向该map文件。到时候的报错信息会非常准确，会定位到某一个文件的行号和列号。
+	
+3.如何使用：直接在webpack配置的 devtool: &quot;source-map&quot;,
+
+4.最佳实践：
+	开发阶段：
+		推荐使用推荐使用 source-map(vue) 或者 cheap-module-source-map(React)， cheap-module-source-map会准确一点，因为ES6语法会经过loader处理，经过处理后再用普通的source-map会造成保存信息不准确。使用cheap-module-source-map就报保证打包文件行号准确。
+	测试阶段：
+		推荐使用 source-map 或者 cheap-module-source-map测试的时候也希望看见具体的报错信息。
+	发布阶段：使用false，或者缺省值（不写）
+		用户层面不希望看见这个，而且源码被看见是很危险的。
+		
+devtool的值（一共24个）：
+	false：直接生成build
+	none：production 模式下的默认值，也是不生成source-map，区别就是none在development会报错
+	eval：development 模式下的默认值，不生成source-map，还原一个大概值，速度会快一点，但是不准确
+	source-map：生成独立的source-map
+	cheap-source-map：更加高效，没有列的信息，一般我们只要知道行号就行了
+	Cheap-moudle-source-map：保持低开销的同时更加准确
+</code></pre></div><h3 id="_21-webpack启动流程"><a href="#_21-webpack启动流程" class="header-anchor">#</a> 21.webpack启动流程</h3> <div class="language- extra-class"><pre class="language-text"><code>1.执行webpack相关命令后，就相当于执行node_modules里面bin/webpack
+2.会生成一个cli对象会，然后判断当前是否安装cli，然后执行runCli方法，该方法是require(wepackclipath)的，会执行该路径的代码
+3.cli里面主要的操作就是合并配置文件，package.json的webpack配置和webpack.config.js的配置做一个合并：
+	1.先去执行makeCommand函数，在里面执行一个叫makeOptions的函数去合并webpack配置
+	2.执行完makeOptions之后又去执行buildCommand函数：
+		1.里面去执行了createCompiler，调用了this.webpack(config.options)生成一个compiler
+		2.这个compiler是将webpack.config.js和package.json的webpack配置合并好的
+		3.然后调用compiler.run()即可启动webpack
+		
+注意：
+	vue和react是没有依赖webpack-cli的，因为webpack-cli要做的事情就是合并webpack.config.js和package.json的配置，我们也可以通过自己去合并生成这个config，然后调用 
+	const config = require(&quot;./config/webpack.config&quot;)({
+  	production: true
+	});
+	const compiler = webpack(config);
+	compiler.run()就可以了
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新于:</span> <span class="time">3/10/2022, 3:44:54 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.922e2828.js" defer></script><script src="/assets/js/2.d7ac843b.js" defer></script><script src="/assets/js/94.8e0db68a.js" defer></script>
+  </body>
+</html>
